@@ -1,7 +1,13 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+.App {    
+  font-family: 'Work Sans', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
   text-align: center;
-  background: #403600;
-  background: linear-gradient(290deg, rgba(0, 0, 0, 1) 0%, rgba(64, 54, 0, 1) 100%);
+  background: #000000;
+  /* background: linear-gradient(290deg, rgba(0, 0, 0, 1) 0%, rgba(64, 54, 0, 1) 100%); */
+  background: linear-gradient(300deg, rgba(64, 54, 0, 1) 0%, rgba(23, 15, 0, 1) 50%, rgba(64, 54, 0, 1) 100%);
 }
 
 .App-logo {
@@ -45,8 +51,16 @@ h3 {
   text-align: start;
 }
 
-.App-link {
-  color: #61dafb;
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: none; 
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+  cursor: grab;
 }
 
 .magic-description {
