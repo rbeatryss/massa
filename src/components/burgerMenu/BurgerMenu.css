@@ -1,20 +1,23 @@
 .burger-menu {
-    position: fixed;
-    top: 0;
-    left: -100vw; 
-    height: 100vh;
-    width: 100vw;
-    color: #E6E4D6;
-    transition: left 0.3s ease;  
-    z-index: 1000; 
-    padding-top: 50px; 
-    background: url('../../assets/siteBackground.png') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  .burger-menu.open {
-    left: 0;  
-  }
+  position: fixed;
+  top: 0;
+  left: -100vw; 
+  height: 100vh;
+  width: 100vw;
+  color: #E6E4D6;
+  opacity: 0;
+  transition: left 0.5s ease, opacity 0.9s ease, transform 0.9s ease; 
+  z-index: 1000; 
+  padding-top: 50px; 
+  background: url('../../assets/siteBackground.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.burger-menu.open {
+  left: 0;
+  opacity: 1;  /* Fade in */
+  transform: scale(1); /* Grow to full size */
+}
   
   .burger-menu ul {
     list-style-type: none;
@@ -24,20 +27,26 @@
   }
   
   .burger-menu li {
-    padding: 0.3em;
+    padding: 0.2em;
     text-align: center;
   }
   
   .burger-menu ul button {
     padding: 1em 1em; 
     border-radius: 50px;
-    background-color: rgba(238, 231, 159, 0.2);
+    background-color: rgba(238, 231, 159, 0.1);
     border: 1px solid #8d8c81;
     color: #E6E4D6;
-    font-size: 18px;
-    width: 7em; 
-    height: 7em;
+    font-size: 14px;
+    width: 9em; 
+    height: 9em;
     text-align: center;
+}
+  .burger-menu ul button:active{
+    background-color: rgba(238, 231, 159, 0.3);
+}
+  .burger-menu ul button:hover{
+    background-color: rgba(238, 231, 159, 0.3);
 }
 
   .burger-menu .close-btn {
@@ -48,9 +57,9 @@
     border-radius: 30px;
     background: none;
     color: #E6E4D6;
-    background-color: rgba(238, 231, 159, 0.2);
+    background-color: rgba(238, 231, 159, 0.1);
     border: 1px solid #8d8c81;
     font-size: 25px;
-    cursor: pointer;
   }
+
   

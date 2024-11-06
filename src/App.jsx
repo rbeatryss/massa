@@ -134,7 +134,7 @@ function App() {
           <h1>MASSA CONFUSA</h1>
         </div>
         <div className="description">
-          <h3>Massa Confusa is a Los Angeles based creative laboratory exploring the subtle art of transformation. Here, creative chaos isn’t something to control—it’s a catalyst for discovery.</h3>
+          <h3>MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF TRANSFORMATION. HERE, CREATIVE CHAOS ISN’T SOMETHING TO CONTROL—IT’S A CATALYST FOR DISCOVERY.</h3>
         </div>
       </div>
       <div className="explore">
