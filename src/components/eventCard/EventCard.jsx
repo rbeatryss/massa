@@ -10,7 +10,7 @@ const EventCard = ({ title, descriptor, description, gradient, shadow, buttons, 
                 background: gradient,
                 boxShadow: shadow,
                 backgroundImage: `url(${backgroundImage})`,          
-                backgroundSize: 'cover', // Optional: covers entire area
+                backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
             <div className="card-event-before" style={{ background: beforeBackground }}></div> {/* Added a wrapper for before pseudo-element */}

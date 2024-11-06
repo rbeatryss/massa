@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import CardEvent from './components/eventCard/EventCard';
 import whiteCard from "./assets/whiteCard.svg";
 import greenCard from "./assets/greenCard.svg";
 import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
+import BurgerButton from './components/burgerMenu/burgerButton/BurgerButton';
+import BurgerMenu from './components/burgerMenu/BurgerMenu';
 
 
 function App() {
@@ -79,10 +81,55 @@ function App() {
     },
   ];
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Refs for sections
+  const aboutRef = useRef(null);
+  const eventsRef = useRef(null);
+  const soundsRef = useRef(null);
+  const communityRef = useRef(null);
+
+  const scrollToSection = (section) => {
+    switch (section) {
+      case 'about':
+        aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'events':
+        eventsRef.current?.scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'sounds':
+        soundsRef.current?.scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'community':
+        communityRef.current?.scrollIntoView({ behavior: 'smooth' });
+        break;
+      default:
+        break;
+    }
+    // Close the menu after navigating
+    toggleMenu();
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    return () => document.body.classList.remove('no-scroll');
+  }, [isMenuOpen]);
   return (
     <div className="App">
-      <header className="header"></header>
-      <div className="about">
+      <header className="header">
+        <BurgerButton toggleMenu={toggleMenu} />
+        <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} onNavigate={scrollToSection} />
+      </header>
+      <div ref={aboutRef} className="about">
         <div className="title">
           <h1>MASSA CONFUSA</h1>
         </div>
@@ -112,13 +159,13 @@ function App() {
           WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
         </h3>
       </div>
-      <div className="events">
+      <div ref={eventsRef} className="events">
         <h2>Events</h2>
       </div>
-      <div className="sound">
+      <div ref={soundsRef} className="sound">
         <h2>Sound</h2>
       </div>
-      <div className="community">
+      <div ref={communityRef} className="community">
         <h2>Community</h2>
       </div>
       <div className="text">
