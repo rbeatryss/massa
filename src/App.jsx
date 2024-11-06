@@ -1,45 +1,81 @@
 import React from 'react';
 import './App.css';
-import CardEvent from './components/cardEvent/CardEvent';
+import CardEvent from './components/eventCard/EventCard';
+import whiteCard from "./assets/whiteCard.svg";
+import greenCard from "./assets/greenCard.svg";
+import yellowCard from "./assets/yellowCard.svg";
+import redCard from "./assets/redCard.svg";
+
 
 function App() {
   const cardData = [
     {
-      title: "Event 1",
-      description: "Description for event 1.",
-      buttons: ["Join", "Info", "Share"],
-      gradient: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(83,101,92,1) 35%, rgba(63,62,58,1) 65%, rgba(0,0,0,1) 100%)",
+      title: "Dark Side",
+      descriptor: "Embrace the unseen",
+      description: "Our first stage guides you through the hidden depths of the psyche, where catharsis is the beginning of the transformation journey.",
+      buttons: [
+        { type: 'event button', eventDate: '10/10', eventTime: '8:00 PM', eventName: 'Tea in Darkness' },
+        { type: 'event button', eventDate: '15/10', eventTime: '7:00 PM', eventName: 'Lecture on shadow with Manoj Dias' },
+      ],
+      backgroundImage: greenCard,
+      // gradient: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(83,101,92,1) 35%, rgba(63,62,58,1) 65%, rgba(0,0,0,1) 100%)",
       shadow: `
-      0 0 15px rgba(0, 0, 0, 0.5), 
-      0 0 30px rgba(0, 0, 0, 0.5),  
-      0 0 50px rgba(0, 0, 0, 0.5), 
-      0 0 80px rgba(0, 0, 0, 0.5)
+
+      0 0 30px rgba(0, 0, 0, 0.3),  
+      0 0 50px rgba(0, 0, 0, 0.2),  
+      0 0 80px rgba(0, 0, 0, 0.1)
     `,
-    
+      // beforeBackground: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(83,101,92,1) 35%, rgba(63,62,58,1) 65%, rgba(0,0,0,1) 100%)",
     },
     {
-      title: "Event 2",
-      description: "Description for event 2.",
-      buttons: ["Join", "Info", "Share"],
-      gradient: "radial-gradient(circle, rgba(225,205,194,1) 0%, rgba(175,202,222,1) 42%, rgba(238,238,238,1) 100%)",
+      title: "Dicovery",
+      descriptor: "The Art of Illumination",
+      description: "Bridging the conscious and unconscious through self-reflection: we delve into the world of dreams and symbols.",
+      buttons: [
+        { type: 'coming soon', label: 'NEW CLASSES ARE COMMING SOON' },
+      ],
+      backgroundImage: whiteCard,
+      // gradient: "radial-gradient(circle at 50% 50%, rgba(42, 23, 22, 0.9) 19%, rgba(153, 241, 228, 0.813) 43%, rgba(44, 11, 9, 0.47) 47%, rgba(255, 255, 255, 0) 91%)",
       shadow: `
-      0 0 15px rgba(255, 255, 255, 0.5), 
       0 0 30px rgba(255, 255, 255, 0.3),  
       0 0 50px rgba(255, 255, 255, 0.2),  
       0 0 80px rgba(255, 255, 255, 0.1)
     `,
+      // beforeBackground: "rgba(105, 120, 94, 0.1);",
     },
     {
-      title: "Event 3",
-      description: "Description for event 3.",
-      buttons: ["Join", "Info", "Share"],
-      gradient: "radial-gradient(circle, #ffda43 0%, #BA811F 42%, rgba(0,0,0,20) 100%)",
+      title: "Learn",
+      descriptor: "Conscious Connection",
+      description: "Deepening our understanding of relationships and unraveling the artof aware interaction with the world.",
+      buttons: [
+        { type: 'coming soon', label: 'NEW CLASSES ARE COMMING SOON' },
+      ],
+      backgroundImage: yellowCard,
+
+      // gradient: "radial-gradient(circle, #F3C81B 0%, #BB9046 35%, #727522 65%, rgba(0,0,0,0.2) 100%)",
       shadow: `
-      0 0 15px rgba(#F3C81B, 0.5), 
-      0 0 30px rgba(#F3C81B, 0.3),  
-      0 0 50px rgba(#F3C81B, 0.2),  
-      0 0 80px rgba(#F3C81B, 0.1)
+        0 0 30px rgba(0, 0, 0, 0.8),
+        0 0 50px rgba	(186, 129, 31, 1),
+        0 0 80px rgba(0, 0, 0, 0.3)
     `,
+      // beforeBackground: "radial-gradient(circle, rgba(255, 215, 67, 0.8) 0%, rgba(186, 129, 31, 1.5) 20%, rgba(60, 60, 60, 1) 50%, rgba(0, 0, 0, 0) 80%)",
+    },
+    {
+      title: "Growth",
+      descriptor: "Fuse Transformation",
+      description: "Advanced practices designed for those who have completed the first three stages. This phase invites you to integrate every lesson and embrace the full expression of who you are.",
+      buttons: [
+        { type: 'coming soon', label: 'INVITE ONLY' },
+      ],
+      backgroundImage: redCard,
+
+      // gradient: "radial-gradient(circle, #F3C81B 0%, #BB9046 35%, #727522 65%, rgba(0,0,0,0.2) 100%)",
+      shadow: `
+      0 0 30px rgba(0, 0, 0, 0.3),  
+      0 0 50px rgba(0, 0, 0, 0.2),  
+      0 0 80px rgba(0, 0, 0, 0.1)
+    `,
+      // beforeBackground: "radial-gradient(circle, rgba(255, 215, 67, 0.8) 0%, rgba(186, 129, 31, 1.5) 20%, rgba(60, 60, 60, 1) 50%, rgba(0, 0, 0, 0) 80%)",
     },
   ];
 
@@ -60,7 +96,9 @@ function App() {
             <CardEvent
               key={index}
               title={card.title}
+              descriptor={card.descriptor}
               description={card.description}
+              backgroundImage={card.backgroundImage}
               gradient={card.gradient}
               shadow={card.shadow}
               buttons={card.buttons}

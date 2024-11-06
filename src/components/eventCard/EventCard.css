@@ -1,0 +1,54 @@
+.card-event {
+    position: relative;
+    height: 80vh;
+    width: 80vw;
+    flex: 0 0 auto;
+    margin: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding: 20px;
+    border-radius: 60px;
+    color: rgb(254, 254, 254);
+    scroll-snap-align: center;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.15), 0 0 35px rgba(0, 0, 0, 0.1); */
+    /* opacity: 0.9 */
+}
+
+.card-event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: black; */
+    filter: blur(100px); 
+    border-radius: inherit;
+    /* background: radial-gradient(circle, rgba(249, 249, 249, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(62, 56, 52, 0.2) 80%, rgba(0, 0, 0, 0) 100%); */
+    z-index: -1; 
+}
+
+.event-container {
+    margin: 0 1rem;
+}
+
+.card-title {
+
+}
+
+.card-descriptor {
+font-weight: 500;
+}
+
+.card-description {
+    text-align: left;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    width: 90%; 
+    margin: 1.5rem 1rem;
+}
