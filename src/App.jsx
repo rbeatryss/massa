@@ -14,8 +14,12 @@ import redCard from "./assets/redCard.svg";
 import eventBackground from "./assets/eventsIMG.png"
 import eventBackground2 from "./assets/eventImage2.jpg"
 import logoLanding from "./assets/logoLanding.svg"
+import communityBackground from "./assets/siteBackground.png"
+import email from './assets/mail.svg'
+import instagram from './assets/instagram.svg'
 
 import './App.css';
+import CommunityCard from './components/cards/cummunityCard/CommunityCard';
 
 function App() {
   const bookCardData = [
@@ -100,6 +104,13 @@ function App() {
       eventAddress2Line: "205 E Anaheim St, Long Beach, CA 90813",
       description: "Please arrive promptly at 6:30pm to not disrupt the sound bath experience. You are welcome to bring your own mat, cushion, and blanket or use the built in mat floor for cushion."
     },
+  ];
+  const communityCardData = [
+    {
+      backgroundImage: communityBackground,
+      date: "11.09.24",
+      post: "Welcome to Massa Confusa, a transformative experience grounded in the ancient philosophy of alchemy. The concept of massa confusa, originating from the alchemical process, represents the chaotic, unformed matter at the beginning of profound transformation. Alchemists believed that nature was not soulless, and their work was a reflection of inner psychic processes. This philosophy offers a powerful lens for understanding the nature of psychic change. The journey begins with nigredo, or 'blackness'—the initial stage where old forms decay into dark chaos. Carl Jung, drawing upon this alchemical tradition, saw nigredo as a crucial part of the human psyche's evolution, referring to it as the necessary darkness at the beginning of deep inner work."
+    }
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -204,25 +215,41 @@ function App() {
       </div>
       <div ref={communityRef} className="community">
         <h2 className='community-title'>Community</h2>
+        {communityCardData.map((card, index) => (
+          <CommunityCard
+            key={index}
+            backgroundImage={card.backgroundImage}
+            // beforeBackground={card.beforeBackground}
+            date={card.date}
+            post={card.post}
+          />
+        ))}
+
       </div>
-      <div className="text">
+      {/* <div className="text">
         <h3 className="text-animation">
-          {/* FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS. */}
         </h3>
-      </div>
+      </div> */}
       <div className="closing">
         <img src={logoLanding} />
         <h3 className="quote">
-          MASSA CONFUSA IS A SPACE FOR HOLISTIC EXPLORATION, WHERE WE EMBRACE THE UNKNOWN AS A DRIVING FORCE THROUGH EXPERIMENTATION, OBSERVATION, AND PRACTICE.
+          MASSA CONFUSA IS A SPACE FOR HOLISTIC EXPLORATION, WHERE WE EMBRACE THE UNKNOWN AS A DRIVING FORCE THROUGH EXPERIMENTATION, OBSERVATION, AND PRACTICE.
         </h3>
         <div className="title">
           <h1>MASSA CONFUSA</h1>
         </div>
       </div>
       <footer>
-        <div className="footer">
-          {/* buttons */}
+        <div className="footer-container">
           <p className='date'>©2024</p>
+          <div className='btn-container'>
+            <button className="action-btn">
+              <img src={email} alt="email" />
+            </button>
+            <button className="action-btn">
+              <img src={instagram} alt="instagram" />
+            </button>
+          </div>
         </div>
       </footer>
     </div>

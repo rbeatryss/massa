@@ -1,27 +1,17 @@
 .community-card {
-    height: 80vh;
+    height: auto;
     width: 80vw;
     padding: 20px;
     border-radius: 60px;
     color: #E6E4D6;
     text-align: start;
     margin: 2rem auto;
-    background-color: #707735;
 }
 
 .community-card-container {
-    margin: 1.5em 0;
+    margin: 2rem 0.5rem;
 }
 
-.community-card-title,
-.community-card-descriptor {
-    margin: 0;
-}
-
-.community-card-descriptor {
-    margin-bottom: 3rem;
-}
-
-ul {
-    padding: 0 0 0 20px;
+.community-card-date{
+    margin-bottom: 1rem;
 }
