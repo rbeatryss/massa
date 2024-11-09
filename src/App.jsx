@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import CardEvent from './components/eventCard/EventCard';
+import CardEvent from './components/bookCard/BookCard';
 import whiteCard from "./assets/whiteCard.svg";
 import greenCard from "./assets/greenCard.svg";
 import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
 import BurgerButton from './components/burgerMenu/burgerButton/BurgerButton';
 import BurgerMenu from './components/burgerMenu/BurgerMenu';
+import SoundCard from './components/soundCard/SoundCard';
 
 
 function App() {
@@ -87,7 +88,6 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Refs for sections
   const aboutRef = useRef(null);
   const eventsRef = useRef(null);
   const soundsRef = useRef(null);
@@ -110,7 +110,6 @@ function App() {
       default:
         break;
     }
-    // Close the menu after navigating
     toggleMenu();
   };
 
@@ -123,6 +122,7 @@ function App() {
 
     return () => document.body.classList.remove('no-scroll');
   }, [isMenuOpen]);
+
   return (
     <div className="App">
       <header className="header">
@@ -154,23 +154,24 @@ function App() {
         </div>
       </div>
       <div className="magic">
-        <h2>Magic Rediscovered.</h2>
+        <h2 className="magic-title">Magic Rediscovered.</h2>
         <h3 className="magic-description">
           WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
         </h3>
       </div>
       <div ref={eventsRef} className="events">
-        <h2>Events</h2>
+        <h2 className='events-title'>Events</h2>
       </div>
       <div ref={soundsRef} className="sound">
-        <h2>Sound</h2>
+        <h2 className='sound-title'>Sound</h2>
+        < SoundCard />
       </div>
       <div ref={communityRef} className="community">
-        <h2>Community</h2>
+        <h2 className='community-title'>Community</h2>
       </div>
       <div className="text">
         <h3 className="text-animation">
-          FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS.
+          {/* FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS. */}
         </h3>
       </div>
     </div>
