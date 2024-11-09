@@ -1,17 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './App.css';
-import CardEvent from './components/bookCard/BookCard';
+
+import BookCard from './components/cards/bookCard/BookCard';
+import BurgerButton from './components/burgerMenu/burgerButton/BurgerButton';
+import BurgerMenu from './components/burgerMenu/BurgerMenu';
+import SoundCard from './components/cards/soundCard/SoundCard';
+import EventCard from './components/cards/eventCard/EventCard';
+
+//assets
 import whiteCard from "./assets/whiteCard.svg";
 import greenCard from "./assets/greenCard.svg";
 import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
-import BurgerButton from './components/burgerMenu/burgerButton/BurgerButton';
-import BurgerMenu from './components/burgerMenu/BurgerMenu';
-import SoundCard from './components/soundCard/SoundCard';
+import eventBackground from "./assets/eventsIMG.png"
+import eventBackground2 from "./assets/eventImage2.jpg"
+import logoLanding from "./assets/logoLanding.svg"
 
+import './App.css';
 
 function App() {
-  const cardData = [
+  const bookCardData = [
     {
       title: "Dark Side",
       descriptor: "Embrace the unseen",
@@ -21,14 +28,12 @@ function App() {
         { type: 'event button', eventDate: '15/10', eventTime: '7:00 PM', eventName: 'Lecture on shadow with Manoj Dias' },
       ],
       backgroundImage: greenCard,
-      // gradient: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(83,101,92,1) 35%, rgba(63,62,58,1) 65%, rgba(0,0,0,1) 100%)",
       shadow: `
 
       0 0 30px rgba(0, 0, 0, 0.3),  
       0 0 50px rgba(0, 0, 0, 0.2),  
       0 0 80px rgba(0, 0, 0, 0.1)
     `,
-      // beforeBackground: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(83,101,92,1) 35%, rgba(63,62,58,1) 65%, rgba(0,0,0,1) 100%)",
     },
     {
       title: "Dicovery",
@@ -38,13 +43,11 @@ function App() {
         { type: 'coming soon', label: 'NEW CLASSES ARE COMMING SOON' },
       ],
       backgroundImage: whiteCard,
-      // gradient: "radial-gradient(circle at 50% 50%, rgba(42, 23, 22, 0.9) 19%, rgba(153, 241, 228, 0.813) 43%, rgba(44, 11, 9, 0.47) 47%, rgba(255, 255, 255, 0) 91%)",
       shadow: `
       0 0 30px rgba(255, 255, 255, 0.3),  
       0 0 50px rgba(255, 255, 255, 0.2),  
       0 0 80px rgba(255, 255, 255, 0.1)
     `,
-      // beforeBackground: "rgba(105, 120, 94, 0.1);",
     },
     {
       title: "Learn",
@@ -54,14 +57,11 @@ function App() {
         { type: 'coming soon', label: 'NEW CLASSES ARE COMMING SOON' },
       ],
       backgroundImage: yellowCard,
-
-      // gradient: "radial-gradient(circle, #F3C81B 0%, #BB9046 35%, #727522 65%, rgba(0,0,0,0.2) 100%)",
       shadow: `
         0 0 30px rgba(0, 0, 0, 0.8),
         0 0 50px rgba	(186, 129, 31, 1),
         0 0 80px rgba(0, 0, 0, 0.3)
     `,
-      // beforeBackground: "radial-gradient(circle, rgba(255, 215, 67, 0.8) 0%, rgba(186, 129, 31, 1.5) 20%, rgba(60, 60, 60, 1) 50%, rgba(0, 0, 0, 0) 80%)",
     },
     {
       title: "Growth",
@@ -71,14 +71,34 @@ function App() {
         { type: 'coming soon', label: 'INVITE ONLY' },
       ],
       backgroundImage: redCard,
-
-      // gradient: "radial-gradient(circle, #F3C81B 0%, #BB9046 35%, #727522 65%, rgba(0,0,0,0.2) 100%)",
       shadow: `
       0 0 30px rgba(0, 0, 0, 0.3),  
       0 0 50px rgba(0, 0, 0, 0.2),  
       0 0 80px rgba(0, 0, 0, 0.1)
     `,
-      // beforeBackground: "radial-gradient(circle, rgba(255, 215, 67, 0.8) 0%, rgba(186, 129, 31, 1.5) 20%, rgba(60, 60, 60, 1) 50%, rgba(0, 0, 0, 0) 80%)",
+    },
+  ];
+  const eventCardData = [
+    {
+      backgroundImage: eventBackground,
+      beforeBackground: "rgba(56, 33, 0, 0.5)",
+      title: "MASSA CONFUSA",
+      eventName: "Modular Sound Bath",
+      eventDate: "Saturday, September 7th",
+      eventTime: "6:45pm-7:45pm",
+      eventAddress1Line: "Long Beach Rising",
+      eventAddress2Line: "205 E Anaheim St, Long Beach, CA 90813",
+      description: "Please arrive promptly at 6:30pm to not disrupt the sound bath experience. You are welcome to bring your own mat, cushion, and blanket or use the built in mat floor for cushion."
+    },
+    {
+      backgroundImage: eventBackground2,
+      title: "MASSA CONFUSA",
+      eventName: "Modular Sound Bath",
+      eventDate: "Saturday, September 7th",
+      eventTime: "6:45pm-7:45pm",
+      eventAddress1Line: "Long Beach Rising",
+      eventAddress2Line: "205 E Anaheim St, Long Beach, CA 90813",
+      description: "Please arrive promptly at 6:30pm to not disrupt the sound bath experience. You are welcome to bring your own mat, cushion, and blanket or use the built in mat floor for cushion."
     },
   ];
 
@@ -139,8 +159,8 @@ function App() {
       </div>
       <div className="explore">
         <div className="horizontal-scroll">
-          {cardData.map((card, index) => (
-            <CardEvent
+          {bookCardData.map((card, index) => (
+            <BookCard
               key={index}
               title={card.title}
               descriptor={card.descriptor}
@@ -161,6 +181,22 @@ function App() {
       </div>
       <div ref={eventsRef} className="events">
         <h2 className='events-title'>Events</h2>
+        <div className="horizontal-scroll">
+          {eventCardData.map((card, index) => (
+            <EventCard
+              key={index}
+              backgroundImage={card.backgroundImage}
+              beforeBackground={card.beforeBackground}
+              title={card.title}
+              eventName={card.eventName}
+              eventDate={card.eventDate}
+              eventTime={card.eventTime}
+              eventAddress1Line={card.eventAddress1Line}
+              eventAddress2Line={card.eventAddress2Line}
+              description={card.description}
+            />
+          ))}
+        </div>
       </div>
       <div ref={soundsRef} className="sound">
         <h2 className='sound-title'>Sound</h2>
@@ -174,6 +210,21 @@ function App() {
           {/* FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS. */}
         </h3>
       </div>
+      <div className="closing">
+        <img src={logoLanding} />
+        <h3 className="quote">
+          MASSA CONFUSA IS A SPACE FOR HOLISTIC EXPLORATION, WHERE WE EMBRACE THE UNKNOWN AS A DRIVING FORCE THROUGH EXPERIMENTATION, OBSERVATION, AND PRACTICE.
+        </h3>
+        <div className="title">
+          <h1>MASSA CONFUSA</h1>
+        </div>
+      </div>
+      <footer>
+        <div className="footer">
+          {/* buttons */}
+          <p className='date'>©2024</p>
+        </div>
+      </footer>
     </div>
   );
 }

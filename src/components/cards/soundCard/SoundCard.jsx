@@ -4,11 +4,11 @@ import './SoundCard.css';
 
 const SoundCard = ({ title, descriptor, list }) => {
     return (
-        <div className="card">
-        <div className="card-container">
-            <p className="card-title">MC01</p>
-            <p className="card-descriptor">REJOICE - YOU ARE AT THE BEGINNING</p>
-            <div className="list-container">
+        <div className="sound-card">
+        <div className="sound-card-container">
+            <p className="sound-card-title">MC01</p>
+            <p className="sound-card-descriptor">REJOICE - YOU ARE AT THE BEGINNING</p>
+            <div className="sound-list-container">
                 <ul>
                     <li>20211201 - Ryuichi Sakamoto</li>
                     <li>Franklin's Dream - Biosphere</li>
@@ -26,7 +26,7 @@ const SoundCard = ({ title, descriptor, list }) => {
                     <li> Svefn-g-englar - Sigur Rós</li>
                 </ul>
             </div>
-            <div className="button-container">
+            <div className="sound-button-container">
             </div>
         </div>
         </div>

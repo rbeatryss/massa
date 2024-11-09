@@ -1,0 +1,27 @@
+.sound-card {
+    height: 80vh;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 60px;
+    color: #E6E4D6;
+    text-align: start;
+    margin: 2rem auto;
+    background-color: #707735;
+}
+
+.sound-card-container {
+    margin: 1.5em 0;
+}
+
+.sound-card-title,
+.sound-card-descriptor {
+    margin: 0;
+}
+
+.sound-card-descriptor {
+    margin-bottom: 3rem;
+}
+
+ul {
+    padding: 0 0 0 20px;
+}

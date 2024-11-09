@@ -1,11 +1,11 @@
 import React from 'react';
 import './BookCard.css';
-import CustomButton from '../buttons/CustomButton';
+import CustomButton from '../../buttons/CustomButton';
 
 
 const BookCard = ({ title, descriptor, description, gradient, shadow, buttons, beforeBackground, backgroundImage, }) => {
     return (
-        <div className="card-event"
+        <div className="book-card"
             style={{
                 background: gradient,
                 boxShadow: shadow,
@@ -13,13 +13,13 @@ const BookCard = ({ title, descriptor, description, gradient, shadow, buttons, b
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
-            <div className="card-event-before" style={{ background: beforeBackground }}></div> {/* Added a wrapper for before pseudo-element */}
-            <div className="event-container">
-                <h2 className="card-title">{title}</h2>
-                <h3 className="card-descriptor">{descriptor}</h3>
-                <p className="card-description">{description}</p>
+            <div className="book-card-before" style={{ background: beforeBackground }}></div>
+            <div className="book-card-content-container">
+                <h2 className="book-card-title">{title}</h2>
+                <h3 className="book-card-descriptor">{descriptor}</h3>
+                <p className="book-card-description">{description}</p>
             </div>
-            <div className="button-container">
+            <div className="book-card-button-container">
                 {buttons.map((button, index) => {
                     return (
                         <CustomButton

@@ -7,7 +7,7 @@
   color: #E6E4D6;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.9s ease, visibility 0.9s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
   z-index: 1000;
   padding-top: 50px;
   background: url('../../assets/siteBackground.png') no-repeat center center fixed;

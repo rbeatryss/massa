@@ -44,6 +44,7 @@ h2 {
   text-align: start;
   letter-spacing: -2px;
   font-weight: 500;
+  
 }
 
 h3 {
@@ -60,13 +61,27 @@ p {
 .horizontal-scroll {
   display: flex;
   overflow-x: auto;
+  padding: 1em 0;
+  padding-right: 30px;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+}
+
+/* .horizontal-scroll-left {
+  display: flex;
+  overflow-x: auto;
   padding: 80px 0;
   padding-right: 30px;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
-  left: -250px;
+  direction: rtl;
 }
+
+.horizontal-scroll-left > * {
+  scroll-snap-align: start;
+} */
 
 .horizontal-scroll::-webkit-scrollbar {
   display: none;
@@ -79,23 +94,23 @@ p {
   white-space-collapse: preserve;
 }
 
-.text-animation {
-  color: #E6E4D6;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-}
-
 .no-scroll {
   overflow: hidden;
 }
 
 .about,
-.events,
-.sounds,
-.community,
 .magic,
-.sound {
-  margin: 1em;
+.sounds,
+.sound, 
+.sound, 
+.community, 
+.events {
+  /* margin: 1rem 1.2rem; */
+  height: 100vh;
+}
+.about,
+.magic {
+  margin: 1rem 1.2rem;
   height: 100vh;
 }
 
@@ -113,15 +128,20 @@ p {
   color: #E6E4D6;
   text-align: justify;
   text-justify: inter-word;
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
 }
 
 .magic {
   height: 60vh;
 }
 
-.magic-title, .sound-title, .events-title, .community-title  {
-  margin: 0 1rem;
+.about-title,
+.events-title,
+.sounds-title,
+.community-title,
+.magic-title,
+.sound-title {
+  margin: 1rem 2.5rem;
 }
 
 .magic-description {
@@ -129,7 +149,17 @@ p {
   text-justify: inter-word;
 }
 
+.quote {
+  font-size: 1.2em;
+  font-weight: 400; 
+  text-align: center;
+  margin: 1.5rem auto;
+  width: 80%;
+}
 
+.date {
+  text-align: left;
+}
 
 
 /* @keyframes App-logo-spin {
