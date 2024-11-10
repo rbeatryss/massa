@@ -1,16 +1,17 @@
 import React from 'react';
 import './SoundCard.css';
+import CustomButton from '../../buttons/CustomButton';
 
 
-const SoundCard = ({ title, descriptor, list }) => {
+const SoundCard = ({ title, descriptor, list, backgroundImage }) => {
     return (
         <div className="sound-card">
         <div className="sound-card-container">
             <p className="sound-card-title">MC01</p>
             <p className="sound-card-descriptor">REJOICE - YOU ARE AT THE BEGINNING</p>
-            <div className="sound-list-container">
+            <div className="sound-card-list-container">
                 <ul>
-                    <li>20211201 - Ryuichi Sakamoto</li>
+                    <li>20211201 - Ryuichi Sakamoto</li>
                     <li>Franklin's Dream - Biosphere</li>
                     <li>In A Beautiful Place Out In The Country - Boards of Canada</li>
                     <li> A Midsummer Nice Dream - Ochre</li>
@@ -26,7 +27,8 @@ const SoundCard = ({ title, descriptor, list }) => {
                     <li> Svefn-g-englar - Sigur Rós</li>
                 </ul>
             </div>
-            <div className="sound-button-container">
+            <div className="sound-card-button-container">
+            <CustomButton buttonData={{ type: 'small button', label: 'Listen' }} />
             </div>
         </div>
         </div>

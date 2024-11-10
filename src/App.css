@@ -10,7 +10,7 @@
   background-size: cover;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -19,7 +19,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .header {
   min-height: 10vh;
@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 400;
   color: #E6E4D6;
   text-align: start;

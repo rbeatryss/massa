@@ -11,11 +11,11 @@
     padding: 1rem;
     width: 100%;
     cursor: pointer;
+    position: relative;
     transition: background-color 0.3s ease;
 }
 
 /* coming soon button */
-
 .coming-soon-button {
     border-color: #E6E4D6;
     background: #595959;
@@ -23,12 +23,8 @@
     font-size: 14px;
 }
 
-.coming-soon-button:hover {
-    background-color: #c8c8c8;
-}
 
 /* event button */
-
 .event-date,
 .event-time,
 .event-name {
@@ -47,6 +43,112 @@
     font-size: 11px;
 }
 
+.event-button {
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.event-button > * {
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+}
+
 .event-button:hover {
+    border: none;
     background-color: #3F54D4;
+    box-shadow: 
+        0 0 50px rgba(63, 84, 212, 1),
+        0 0 100px rgba(63, 84, 212, 0.8),
+        0 0 150px rgba(63, 84, 212, 0.3),
+        0 0 200px rgba(63, 84, 212, 0.1);
+    opacity: 1;
+}
+
+.event-button:hover > * {
+    opacity: 0;
+}
+
+.event-button:hover::after {
+    content: 'Book';
+    color: #E6E4D6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .event-button span {
+        position: relative; 
+    }
+
+    .event-button.bright span {
+        opacity: 0;
+    }
+
+    .event-button.bright::after {
+        content: 'Book';
+        color: #E6E4D6;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+        z-index: 0;
+    }
+
+    /* .event-button:active {
+        opacity: 0.8;
+    } */
+}
+
+/* text button */
+.small-button {
+    width: 30%;
+    height: auto;
+    justify-content: center;
+    border-radius: 30px;
+    color: #E6E4D6;
+    background-color: rgba(238, 231, 159, 0.1);
+    border: 1px solid #8d8c81;
+
+}
+
+.small-button:hover {
+    background-color: #ffd500;
+    color: #0057e7;
+    box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.8);
+}
+
+/* icon button */
+.icon-button {
+    width: 30%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #E6E4D6;
+    background-color: rgba(238, 231, 159, 0.1);
+    border: 1px solid #8d8c81;
+}
+
+.icon-button:hover {
+    background-color: rgba(238, 231, 159, 0.2);
+}
+
+.icon-button:active {
+    background-color: rgba(238, 231, 159, 0.3);
+}
+
+.icon {
+    font-size: 1.5em;
 }

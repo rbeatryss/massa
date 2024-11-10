@@ -4,6 +4,7 @@ import CustomButton from '../../buttons/CustomButton';
 
 
 const BookCard = ({ title, descriptor, description, gradient, shadow, buttons, beforeBackground, backgroundImage, }) => {
+    
     return (
         <div className="book-card"
             style={{
@@ -20,18 +21,9 @@ const BookCard = ({ title, descriptor, description, gradient, shadow, buttons, b
                 <p className="book-card-description">{description}</p>
             </div>
             <div className="book-card-button-container">
-                {buttons.map((button, index) => {
-                    return (
-                        <CustomButton
-                            key={index}
-                            type={button.type}
-                            eventName={button.eventName}
-                            eventDate={button.eventDate}
-                            eventTime={button.eventTime}
-                            label={button.label}
-                        />
-                    );
-                })}
+            {buttons.map((buttonData, index) => (
+        <CustomButton key={index} buttonData={buttonData} />
+      ))}
             </div>
         </div>
     );

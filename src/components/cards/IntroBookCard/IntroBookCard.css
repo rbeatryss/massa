@@ -1,0 +1,55 @@
+.intro-book-card {
+    position: relative;
+    height: 80vh;
+    width: 90vw;
+    flex: 0 0 auto;
+    margin: 80px 1.2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 60px;
+    color: rgb(254, 254, 254);
+    scroll-snap-align: center;
+    background: url('../../../assets/exploreBackground.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.intro-book-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 60px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 1;
+}
+
+.intro-book-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5rem;
+    height: 100%;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.intro-book-card-title {
+    letter-spacing: -3px;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.intro-book-card-paragraph {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+.intro-book-card-content > button {
+    margin-top: auto; 
+    margin-bottom: 2rem;
+}

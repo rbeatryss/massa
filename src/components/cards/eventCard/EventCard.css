@@ -50,27 +50,10 @@ p {
     margin-top: 2em;
 }
 
-
-/* .event-card-title {
-    font-weight: 400;
-    font-weight: 500;
-}
-
-.event-card-descriptor {
-    font-weight: 500;
+.event-card-button-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: auto; 
     margin-bottom: 2rem;
 }
-
-.event-card-description {
-    text-align: left;
-    font-weight: 400;
-    font-size: 14px;
-} */
-
-/* .event-card-button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 90%;
-    margin: 1rem 1rem;
-} */

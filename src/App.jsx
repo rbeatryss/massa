@@ -5,6 +5,8 @@ import BurgerButton from './components/burgerMenu/burgerButton/BurgerButton';
 import BurgerMenu from './components/burgerMenu/BurgerMenu';
 import SoundCard from './components/cards/soundCard/SoundCard';
 import EventCard from './components/cards/eventCard/EventCard';
+import CommunityCard from './components/cards/cummunityCard/CommunityCard';
+import IntroBookCard from './components/cards/IntroBookCard/IntroBookCard';
 
 //assets
 import whiteCard from "./assets/whiteCard.svg";
@@ -19,7 +21,6 @@ import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
 
 import './App.css';
-import CommunityCard from './components/cards/cummunityCard/CommunityCard';
 
 function App() {
   const bookCardData = [
@@ -44,7 +45,8 @@ function App() {
       descriptor: "The Art of Illumination",
       description: "Bridging the conscious and unconscious through self-reflection: we delve into the world of dreams and symbols.",
       buttons: [
-        { type: 'coming soon', label: 'NEW CLASSES ARE COMMING SOON' },
+        { type: 'event button', eventDate: '10/10', eventTime: '8:00 PM', eventName: 'Tea in Darkness' },
+        { type: 'event button', eventDate: '15/10', eventTime: '7:00 PM', eventName: 'Lecture on shadow with Manoj Dias' },
       ],
       backgroundImage: whiteCard,
       shadow: `
@@ -58,7 +60,8 @@ function App() {
       descriptor: "Conscious Connection",
       description: "Deepening our understanding of relationships and unraveling the artof aware interaction with the world.",
       buttons: [
-        { type: 'coming soon', label: 'NEW CLASSES ARE COMMING SOON' },
+        { type: 'event button', eventDate: '10/10', eventTime: '8:00 PM', eventName: 'Tea in Darkness' },
+        { type: 'event button', eventDate: '15/10', eventTime: '7:00 PM', eventName: 'Lecture on shadow with Manoj Dias' },
       ],
       backgroundImage: yellowCard,
       shadow: `
@@ -160,7 +163,7 @@ function App() {
         <BurgerButton toggleMenu={toggleMenu} />
         <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} onNavigate={scrollToSection} />
       </header>
-      <div ref={aboutRef} className="about">
+      <div className="about">
         <div className="title">
           <h1>MASSA CONFUSA</h1>
         </div>
@@ -170,6 +173,7 @@ function App() {
       </div>
       <div className="explore">
         <div className="horizontal-scroll">
+          <IntroBookCard />
           {bookCardData.map((card, index) => (
             <BookCard
               key={index}
@@ -230,7 +234,7 @@ function App() {
         <h3 className="text-animation">
         </h3>
       </div> */}
-      <div className="closing">
+      <div ref={aboutRef} className="closing">
         <img src={logoLanding} />
         <h3 className="quote">
           MASSA CONFUSA IS A SPACE FOR HOLISTIC EXPLORATION, WHERE WE EMBRACE THE UNKNOWN AS A DRIVING FORCE THROUGH EXPERIMENTATION, OBSERVATION, AND PRACTICE.
