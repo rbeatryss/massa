@@ -35,6 +35,8 @@ h1 {
   color: #E6E4D6;
   text-align: start;
   margin: 0;
+  line-height:0.8;
+
 }
 
 h2 {
@@ -44,13 +46,14 @@ h2 {
   text-align: start;
   letter-spacing: -2px;
   font-weight: 500;
+  margin-top: 3rem;
 
 }
 
 h3 {
-  font-size: 14px;
-  /* font-size: 1.2rem; */
-  font-weight: 400;
+  /* font-size: 14px; */
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #E6E4D6;
   text-align: start;
 }
@@ -59,7 +62,7 @@ p {
   color: #E6E4D6;
 }
 
-.horizontal-scroll {
+/* .horizontal-scroll {
   display: flex;
   overflow-x: auto;
   padding-right: 30px;
@@ -71,7 +74,7 @@ p {
 .horizontal-scroll::-webkit-scrollbar {
   display: none;
   cursor: grab;
-}
+} */
 
 .magic-description {
   color: #E6E4D6;
@@ -85,8 +88,6 @@ p {
 
 .about,
 .sounds,
-.sound,
-.sound,
 .community,
 .events {
   height: 100vh;
@@ -123,7 +124,7 @@ p {
 .sounds-title,
 .community-title,
 .magic-title,
-.sound-title {
+.sounds-title {
   margin: 1rem 2.5rem 2rem;
   word-wrap: break-word;
 }
@@ -139,13 +140,14 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0;
 }
 
 .quote {
   font-size: 1.2em;
   font-weight: 400;
   text-align: center;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 10rem;
   width: 70%;
 }
 

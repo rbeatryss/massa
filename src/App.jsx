@@ -21,6 +21,7 @@ import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
 
 import './App.css';
+import HorizontalScroll from './components/horizontalScroll/HorizontalScroll';
 
 function App() {
   const bookCardData = [
@@ -172,7 +173,7 @@ function App() {
         </div>
       </div>
       <div className="explore">
-        <div className="horizontal-scroll">
+      <HorizontalScroll>
           <IntroBookCard />
           {bookCardData.map((card, index) => (
             <BookCard
@@ -181,13 +182,12 @@ function App() {
               descriptor={card.descriptor}
               description={card.description}
               backgroundImage={card.backgroundImage}
-              gradient={card.gradient}
               shadow={card.shadow}
               buttons={card.buttons}
             />
           ))}
-        </div>
-      </div>
+        </HorizontalScroll>
+              </div>
       <div className="magic">
         <h2 className="magic-title">Magic Rediscovered.</h2>
         <h3 className="magic-description">
@@ -213,8 +213,8 @@ function App() {
           ))}
         </div>
       </div>
-      <div ref={soundsRef} className="sound">
-        <h2 className='sound-title'>Sounds</h2>
+      <div ref={soundsRef} className="sounds">
+        <h2 className='sounds-title'>Sounds</h2>
         < SoundCard />
       </div>
       <div ref={communityRef} className="community">

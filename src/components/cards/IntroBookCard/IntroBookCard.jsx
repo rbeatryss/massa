@@ -3,7 +3,7 @@ import './IntroBookCard.css';
 import CustomButton from '../../buttons/CustomButton';
 import arrow from "../../../assets/arrow.svg";
 
-const IntroBookCard = ({ nextCardRef, moveCards }) => {
+const IntroBookCard = ({ moveCards }) => {
     return (
         <div className="intro-book-card">
             <div className="intro-book-card-overlay"></div>

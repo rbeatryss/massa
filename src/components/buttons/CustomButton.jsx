@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CustomButton.css';
 
-const CustomButton = ({ buttonData, link }) => {
+const CustomButton = ({ buttonData, link, scrollAction }) => {
     const { type, eventName, eventDate, eventTime, label, icon } = buttonData;
 
     const buttonClass = type === 'coming soon' ? 'coming-soon-button' 
@@ -18,14 +18,18 @@ const CustomButton = ({ buttonData, link }) => {
     }, []);
 
     const handleClick = () => {
-        if (isMobile) {
-            if (clicked) {
-                window.location.href = link;
-            } else {
-                setClicked(true);
-            }
+        if (scrollAction) {
+            scrollAction();
         } else {
-            window.location.href = link;
+            if (isMobile) {
+                if (clicked) {
+                    window.location.href = link;
+                } else {
+                    setClicked(true);
+                }
+            } else {
+                window.location.href = link;
+            }
         }
     };
 
@@ -42,7 +46,7 @@ const CustomButton = ({ buttonData, link }) => {
                 </div>
             ) : type === 'icon button' && icon ? (
                 <span className="icon"> 
-                    {icon && <img src={icon} alt="arrow" />}
+                    <img src={icon} alt="icon" />
                 </span> 
             ) : (
                 <span>{label}</span>
