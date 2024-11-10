@@ -8,7 +8,7 @@
     border-radius: 20px;
     color: #E6E4D6;
     width: 80%;
-    height: 4rem;
+    height: 3rem;
     padding: 1rem;
     width: 100%;
     cursor: pointer;
@@ -26,30 +26,36 @@
 
 
 /* event button */
+.event-content {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.event-details {
+    display: flex;
+    gap: 15px;
+}
+
 .event-date,
-.event-time,
-.event-name {
-    margin: 0 5px;
-}
-
-.event-date {
-    font-size: 13px;
-}
-
 .event-time {
     font-size: 13px;
+    margin: 0;
+}
+
+.event-name-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 5px;
 }
 
 .event-name {
+    text-align: left;
     font-size: 11px;
-}
-
-.event-button {
-    width: auto;
-    height: 3.5rem;
-    position: relative;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    overflow: hidden;
+    line-height: 1.2;
 }
 
 .event-button>* {

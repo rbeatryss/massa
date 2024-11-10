@@ -39,18 +39,22 @@ const CustomButton = ({ buttonData, link, scrollAction }) => {
             onClick={handleClick}
         >
             {type === 'event button' && eventName && eventDate && eventTime ? (
-                <div>
+                <div className="event-content">
+                <div className="event-details">
                     <span className="event-date">{eventDate}</span>
                     <span className="event-time">{eventTime}</span>
+                </div>
+                <div className="event-name-container">
                     <span className="event-name">{eventName}</span>
                 </div>
-            ) : type === 'icon button' && icon ? (
-                <span className="icon"> 
-                    <img src={icon} alt="icon" />
-                </span> 
-            ) : (
-                <span>{label}</span>
-            )}
+            </div>
+        ) : type === 'icon button' && icon ? (
+            <span className="icon"> 
+                <img src={icon} alt="icon" />
+            </span> 
+        ) : (
+            <span>{label}</span>
+        )}
         </button>
     );
 };
