@@ -5,9 +5,9 @@
   margin: 0;
   box-sizing: border-box;
   text-align: center;
-  /* background: linear-gradient(300deg, rgba(64, 54, 0, 1) 0%, rgba(23, 15, 0, 1) 50%, rgba(64, 54, 0, 1) 100%); */
-  background: url('./assets/siteBackground.png') no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(180deg, #0A0000 0%, #271B00 8%,#312509 46%,#3B2E12 67%, #504610 100%);
+  /* background: url('./assets/siteBackground.png') no-repeat center center;
+  background-size: cover; */
 }
 
 /* .App-logo {
