@@ -214,7 +214,7 @@ function App() {
         </div>
       </div>
       <div ref={soundsRef} className="sound">
-        <h2 className='sound-title'>Sound</h2>
+        <h2 className='sound-title'>Sounds</h2>
         < SoundCard />
       </div>
       <div ref={communityRef} className="community">

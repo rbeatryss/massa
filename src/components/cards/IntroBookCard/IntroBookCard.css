@@ -33,8 +33,7 @@
     align-items: center;
     margin: 0 1.5rem;
     height: 100%;
-    overflow: hidden;
-    justify-content: flex-start;
+    overflow: hidden; 
 }
 
 .intro-book-card-title {
@@ -43,13 +42,22 @@
     margin-bottom: 4rem;
 }
 
-.intro-book-card-paragraph {
-    font-size: 1.3em;
-    font-weight: 400;
-    margin-bottom: 2.5rem;
+.intro-book-card-paragraph-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
 }
 
-.intro-book-card-content > button {
-    margin-top: auto; 
+.intro-book-card-paragraph {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.intro-book-card-paragraph-button > button {
+    margin-top: 1.5rem; 
     margin-bottom: 2rem;
 }
