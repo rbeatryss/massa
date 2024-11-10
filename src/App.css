@@ -48,7 +48,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 14px;
+  /* font-size: 1.2rem; */
   font-weight: 400;
   color: #E6E4D6;
   text-align: start;
@@ -61,7 +62,6 @@ p {
 .horizontal-scroll {
   display: flex;
   overflow-x: auto;
-  padding: 1em 0;
   padding-right: 30px;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
@@ -107,9 +107,7 @@ p {
 }
 
 .description h3 {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #E6E4D6;
+  /* font-size: 14px; */
   text-align: justify;
   text-justify: inter-word;
   margin: 1.5rem 0;
@@ -126,13 +124,14 @@ p {
 .community-title,
 .magic-title,
 .sound-title {
-  margin: 1rem 2.5rem;
+  margin: 1rem 2.5rem 2rem;
   word-wrap: break-word;
 }
 
 .magic-description {
   text-align: justify;
   text-justify: inter-word;
+  word-spacing: 5px;
 }
 
 .closing {

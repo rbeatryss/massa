@@ -164,11 +164,11 @@ function App() {
         <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} onNavigate={scrollToSection} />
       </header>
       <div className="about">
-        <div className="title">
-          <h1>MASSA CONFUSA</h1>
-        </div>
         <div className="description">
           <h3>MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF TRANSFORMATION. HERE, CREATIVE CHAOS ISN’T SOMETHING TO CONTROL—IT’S A CATALYST FOR DISCOVERY.</h3>
+        </div>
+        <div className="title">
+          <h1>MASSA CONFUSA</h1>
         </div>
       </div>
       <div className="explore">
