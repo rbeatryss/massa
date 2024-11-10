@@ -39,5 +39,6 @@
     flex-direction: column;
     overflow-x: visible; 
     gap: 20px;
+    padding: 0;
   }
 }
