@@ -31,3 +31,13 @@
 .dot.active {
   background-color: #E6E4D6; 
 }
+
+
+@media (min-width: 1024px) {
+  .horizontal-scroll {
+    display: flex;
+    flex-direction: column;
+    overflow-x: visible; 
+    gap: 20px;
+  }
+}
