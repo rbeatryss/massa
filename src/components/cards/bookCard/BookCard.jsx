@@ -3,27 +3,31 @@ import './BookCard.css';
 import CustomButton from '../../buttons/CustomButton';
 
 
-const BookCard = ({ title, descriptor, description, gradient, shadow, buttons, beforeBackground, backgroundImage, }) => {
-    
+const BookCard = ({ title, descriptor, description, mobileDescription, desktopDescription, gradient, shadow, buttons, beforeBackground, backgroundImage, }) => {
+
     return (
         <div className="book-card"
             style={{
                 background: gradient,
                 boxShadow: shadow,
-                backgroundImage: `url(${backgroundImage})`,          
+                backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
             <div className="book-card-before" style={{ background: beforeBackground }}></div>
             <div className="book-card-content-container">
+            <div className="book-card-header">
                 <h2 className="book-card-title">{title}</h2>
                 <h3 className="book-card-descriptor">{descriptor}</h3>
-                <p className="book-card-description">{description}</p>
+                </div>
+                <p className=".book-card-description">{description}</p>
+                <p className=".book-card-description-mobile">{mobileDescription}</p>
+                <p className=".book-card-description-desktop">{desktopDescription}</p>
             </div>
             <div className="book-card-button-container">
-            {buttons.map((buttonData, index) => (
-        <CustomButton key={index} buttonData={buttonData} />
-      ))}
+                {buttons.map((buttonData, index) => (
+                    <CustomButton key={index} buttonData={buttonData} />
+                ))}
             </div>
         </div>
     );

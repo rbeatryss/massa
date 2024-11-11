@@ -53,13 +53,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 4.5vw;
   font-weight: 500;
   color: #E6E4D6;
   text-align: start;
 }
 
 p {
+  font-size: 4vw;
   color: #E6E4D6;
 }
 
@@ -90,7 +91,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
   height: 80vh;
 }
 
@@ -193,28 +193,42 @@ footer {
 }
 
 
+@media (min-width: 500px) {
+  p {
+    font-size: 2.8vw;
+  }
+}
+
 @media (min-width: 1024px) {
-h1 {
-  font-size: 11.5vw;
-  margin-bottom: 8%;
-}
+  h1 {
+    font-size: 11.5vw;
+    margin-bottom: 8%;
+  }
 
-.about {
-  height: 100vh;
-}
+  .about {
+    height: 100vh;
+  }
 
-.about-description h3 {
-  margin-top: 18vh;
-  word-spacing: 10px;
-  white-space: preserve;
-}
+  .about-description h3 {
+    margin-top: 18vh;
+    word-spacing: 10px;
+    white-space: preserve;
+  }
 
-.explore {
-  margin: 1rem 1.2rem;
-}
+  .explore {
+    margin: 1rem 1.2rem;
+  }
 
-h2 {
-  font-size: 3.5vw;
-}
+  h2 {
+    font-size: 3.5vw;
+  }
+
+  h3 {
+    font-size: 1.5vw;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
 
 }

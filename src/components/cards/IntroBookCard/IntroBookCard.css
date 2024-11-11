@@ -49,12 +49,13 @@
     margin-top: auto;
 }
 
-.intro-book-card-paragraph, 
+.intro-book-card-paragraph,
 .intro-book-card-paragraph-two {
     font-size: 3.5vw;
     margin-bottom: 2rem;
     font-weight: 400;
     text-align: justify;
+    color: #CAC5B1;
     text-justify: inter-word;
 }
 
