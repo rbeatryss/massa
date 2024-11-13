@@ -38,7 +38,7 @@ function App() {
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Lecture on shadow with Manoj Dias' },
       ],
       backgroundImage: greenCard,
-      beforeBackground: 'rgba(105, 120, 94, 0.1)',
+      overlayColor: 'rgba(105, 120, 94, 0.1)',
     //   shadow: `
 
     //   0 0 30px rgba(0, 0, 0, 0.3),  
@@ -58,11 +58,12 @@ function App() {
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Acupuncture and Sound' },
       ],
       backgroundImage: whiteCard,
-      shadow: `
-      0 0 30px rgba(255, 255, 255, 0.3),  
-      0 0 50px rgba(255, 255, 255, 0.2),  
-      0 0 80px rgba(255, 255, 255, 0.1)
-    `,
+      overlayColor: 'rgba(255, 255, 255, 0.2)',
+    //   shadow: `
+    //   0 0 30px rgba(255, 255, 255, 0.3),  
+    //   0 0 50px rgba(255, 255, 255, 0.2),  
+    //   0 0 80px rgba(255, 255, 255, 0.1)
+    // `,
     },
     {
       title: "Learn",
@@ -76,6 +77,7 @@ function App() {
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Movement with Karimou' },
       ],
       backgroundImage: yellowCard,
+      overlayColor: 'rgba(234, 172, 91, 0.1)',
     //   shadow: `
     //     0 0 30px rgba(0, 0, 0, 0.8),
     //     0 0 50px rgba	(186, 129, 31, 1),
@@ -92,6 +94,8 @@ function App() {
         { type: 'coming soon', label: 'INVITE ONLY' },
       ],
       backgroundImage: redCard,
+      overlayColor: 'rgba(224, 164, 87, 0.1)',
+
     //   shadow: `
     //   0 0 30px rgba(0, 0, 0, 0.3),  
     //   0 0 50px rgba(0, 0, 0, 0.2),  
@@ -195,6 +199,7 @@ function App() {
               descriptor={card.descriptor}
               description={card.description}
               backgroundImage={card.backgroundImage}
+              overlayColor={card.overlayColor}
               shadow={card.shadow}
               buttons={card.buttons}
             />
