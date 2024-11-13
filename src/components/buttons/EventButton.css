@@ -1,0 +1,30 @@
+.event-content {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.event-details {
+    display: flex;
+    gap: 15px;
+}
+
+.event-date,
+.event-time {
+    font-size: 13px;
+    margin: 0;
+}
+
+.event-name-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 5px;
+}
+
+.event-name {
+    text-align: left;
+    font-size: 11px;
+    line-height: 1.2;
+}
