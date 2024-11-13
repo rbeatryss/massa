@@ -10,7 +10,8 @@ import IntroBookCard from './components/cards/IntroBookCard/IntroBookCard';
 
 //assets
 import whiteCard from "./assets/whiteCard.svg";
-import greenCard from "./assets/greenCard.svg";
+// import greenCard from "./assets/greenCard.svg";
+import greenCard from "./assets/green-test.svg";
 import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
 import eventBackground from "./assets/eventsIMG.png"
@@ -37,12 +38,13 @@ function App() {
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Lecture on shadow with Manoj Dias' },
       ],
       backgroundImage: greenCard,
-      shadow: `
+      beforeBackground: 'rgba(105, 120, 94, 0.1)',
+    //   shadow: `
 
-      0 0 30px rgba(0, 0, 0, 0.3),  
-      0 0 50px rgba(0, 0, 0, 0.2),  
-      0 0 80px rgba(0, 0, 0, 0.1)
-    `,
+    //   0 0 30px rgba(0, 0, 0, 0.3),  
+    //   0 0 50px rgba(0, 0, 0, 0.2),  
+    //   0 0 80px rgba(0, 0, 0, 0.1)
+    // `,
     },
     {
       title: "Dicovery",
@@ -74,11 +76,11 @@ function App() {
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Movement with Karimou' },
       ],
       backgroundImage: yellowCard,
-      shadow: `
-        0 0 30px rgba(0, 0, 0, 0.8),
-        0 0 50px rgba	(186, 129, 31, 1),
-        0 0 80px rgba(0, 0, 0, 0.3)
-    `,
+    //   shadow: `
+    //     0 0 30px rgba(0, 0, 0, 0.8),
+    //     0 0 50px rgba	(186, 129, 31, 1),
+    //     0 0 80px rgba(0, 0, 0, 0.3)
+    // `,
     },
     {
       title: "Growth",
@@ -90,11 +92,11 @@ function App() {
         { type: 'coming soon', label: 'INVITE ONLY' },
       ],
       backgroundImage: redCard,
-      shadow: `
-      0 0 30px rgba(0, 0, 0, 0.3),  
-      0 0 50px rgba(0, 0, 0, 0.2),  
-      0 0 80px rgba(0, 0, 0, 0.1)
-    `,
+    //   shadow: `
+    //   0 0 30px rgba(0, 0, 0, 0.3),  
+    //   0 0 50px rgba(0, 0, 0, 0.2),  
+    //   0 0 80px rgba(0, 0, 0, 0.1)
+    // `,
     },
   ];
   const eventCardData = [
@@ -177,7 +179,7 @@ function App() {
       </header>
       <div className="about">
         <div className="about-description">
-          <h3>MASSA     CONFUSA    IS    A    LOS     ANGELES    BASED    CREATIVE   LABORATORY    EXPLORING    THE     SUBTLE    ART     OF TRANSFORMATION. HERE, CREATIVE CHAOS ISN’T SOMETHING TO CONTROL—IT’S A CATALYST FOR DISCOVERY.</h3>
+          <h3>MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
         </div>
         <div className="about-title">
           <h1>MASSA CONFUSA</h1>

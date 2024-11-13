@@ -1,109 +1,116 @@
 .book-card {
-    position: relative;
-    height: 80vh;
-    width: 90vw;
-    flex: 0 0 auto;
-    margin: 80px 1.2rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 60px;
-    color: rgb(254, 254, 254);
-    scroll-snap-align: center;
-    flex-wrap: wrap;
-}
+        position: relative;
+        width: 90vw;
+        /* size of the bookcard */
+        min-height: 85vh; 
+        height: auto; 
+        flex: 0 0 auto;
+        margin: 0 1.2rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 60px;
+        color: rgb(254, 254, 254);
+        background: url('../../../assets/exploreBackground.png');
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: center;
+        flex-wrap: wrap;
+    }
 
-.book-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(100px);
-    border-radius: inherit;
-    z-index: -1;
-}
-
-.book-card-content-container {
-    margin: 0 2rem;
-    overflow: hidden;
-    text-align: left;
-}
-
-.book-card-title {
-    letter-spacing: -2px;
-    font-weight: 500;
-    margin-bottom: 2rem;
-}
-
-.book-card-descriptor {
-    font-weight: 500;
-    margin-bottom: 2rem;
-}
-
-.book-card-description-desktop {
-    display: none;
-}
-
-.book-card-description-mobile {
-    display: block;
-}
-
-.book-card-button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: auto 2rem 20rem;
-}
-
-@media (min-width: 500px) {
-.book-card-button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: auto 2rem 13rem;
-}
-}
-
-@media (min-width: 1024px) {
-    .book-card {
-        width: 100%;
-        height: 60vh;
-        justify-self: center;
-        margin: 0 auto;
+    .book-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(100px);
+        border-radius: inherit;
+        z-index: -1;
     }
 
     .book-card-content-container {
-        padding: 1rem 2rem;
+        margin: 0 2rem;
+        overflow: hidden;
+        text-align: left;
     }
 
-    .book-card-header {
-        display: flex;
-        align-items: center;
-        gap: 60%; 
+    .book-card-title {
+        letter-spacing: -2px;
+        font-weight: 500;
+        margin-bottom: 2rem;
     }
+
     .book-card-descriptor {
         font-weight: 500;
         margin-bottom: 2rem;
-        text-align: right;
-    }
-
-    .book-card-description {
-        text-align: left;
-        margin-bottom: 2rem;
-    }
-
-    .book-card-description-mobile {
-        display: none;
     }
 
     .book-card-description-desktop {
+        display: none;
+    }
+
+    .book-card-description-mobile {
         display: block;
     }
 
     .book-card-button-container {
         display: flex;
-        flex-direction: row;
-        margin: 5rem 2rem;
+        flex-direction: column;
+        gap: 7px;
+        margin: auto 2rem 9rem
     }
-}
+
+    @media (min-width: 500px) {
+        .book-card-button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: auto 2rem 13rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .book-card {
+            width: 100%;
+            height: auto;
+            min-height: 60vh; 
+            justify-self: center;
+            margin: 0 auto;
+        }
+
+        .book-card-content-container {
+            padding: 1rem 2rem;
+        }
+
+        .book-card-header {
+            display: flex;
+            align-items: center;
+            gap: 60%;
+        }
+
+        .book-card-descriptor {
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: right;
+        }
+
+        .book-card-description {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .book-card-description-mobile {
+            display: none;
+        }
+
+        .book-card-description-desktop {
+            display: block;
+        }
+
+        .book-card-button-container {
+            display: flex;
+            flex-direction: row;
+            margin: 5rem 2rem;
+        }
+    }

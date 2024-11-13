@@ -5,6 +5,7 @@
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
+  padding: 4rem 1.3rem;
 }
 
 .horizontal-scroll::-webkit-scrollbar {
@@ -19,7 +20,7 @@
 }
 
 .dot {
-  width:8px;
+  width: 8px;
   height: 8px;
   margin: 0 5px;
   border: 1px solid #8d8c81;
@@ -29,7 +30,7 @@
 }
 
 .dot.active {
-  background-color: #E6E4D6; 
+  background-color: #E6E4D6;
 }
 
 
@@ -37,7 +38,7 @@
   .horizontal-scroll {
     display: flex;
     flex-direction: column;
-    overflow-x: visible; 
+    overflow-x: visible;
     gap: 20px;
     padding: 0;
   }
