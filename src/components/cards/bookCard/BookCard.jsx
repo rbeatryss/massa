@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './BookCard.css';
 import CustomButton from '../../buttons/CustomButton';
+import EventButtonDesktop from '../../buttons/eventButtonDesktop/EventButtonDesktop';
 
 const BookCard = ({
   title,
@@ -15,14 +16,26 @@ const BookCard = ({
   backgroundImage,
 }) => {
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(null);
-  const cardRef = React.useRef(null); // Reference for the current card
+  const [isMobile, setIsMobile] = useState(false);
+  const cardRef = React.useRef(null); 
 
-  // Function to handle button click
   const handleButtonClick = (index) => {
     setSelectedButtonIndex(index);
   };
 
-  // Set up the IntersectionObserver
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize); 
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -79,6 +92,19 @@ const BookCard = ({
           />
         ))}
       </div>
+      {!isMobile && (
+        <div className="book-card-button-container-desktop">
+          {buttons.map((buttonData, index) => (
+            <EventButtonDesktop
+              key={index}
+              buttonData={buttonData}
+              index={index}
+              isSelected={selectedButtonIndex === index}
+              onButtonClick={handleButtonClick}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

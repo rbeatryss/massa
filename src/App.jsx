@@ -17,7 +17,6 @@ import redCard from "./assets/redCard.svg";
 import eventBackground from "./assets/eventsIMG.png"
 import eventBackground2 from "./assets/eventImage2.jpg"
 import logoLanding from "./assets/logoLanding.svg"
-import communityBackground from "./assets/siteBackground.png"
 import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
 
@@ -128,7 +127,6 @@ function App() {
   ];
   const communityCardData = [
     {
-      backgroundImage: communityBackground,
       date: "11.09.24",
       post: "Welcome to Massa Confusa, a transformative experience grounded in the ancient philosophy of alchemy. The concept of massa confusa, originating from the alchemical process, represents the chaotic, unformed matter at the beginning of profound transformation. Alchemists believed that nature was not soulless, and their work was a reflection of inner psychic processes. This philosophy offers a powerful lens for understanding the nature of psychic change. The journey begins with nigredo, or 'blackness'—the initial stage where old forms decay into dark chaos. Carl Jung, drawing upon this alchemical tradition, saw nigredo as a crucial part of the human psyche's evolution, referring to it as the necessary darkness at the beginning of deep inner work."
     }

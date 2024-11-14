@@ -10,9 +10,9 @@
         flex-direction: column;
         border-radius: 60px;
         color: rgb(254, 254, 254);
-        background: url('../../../assets/exploreBackground.png');
-        background-size: cover;
-        background-position: center;
+        /* background: url('../../../assets/exploreBackground.png'); */
+        /* background-size: cover;
+        background-position: center; */
         scroll-snap-align: center;
         flex-wrap: wrap;
         /* overflow: hidden; */
@@ -62,6 +62,9 @@
         gap: 7px;
         margin: auto 2rem 9rem
     }
+    .book-card-button-container-desktop {
+        display: none;
+    }
 
     @media (min-width: 500px) {
         .book-card-button-container {
@@ -110,9 +113,13 @@
             display: block;
         }
 
-        .book-card-button-container {
+        .book-card-button-container-desktop {
             display: flex;
             flex-direction: row;
             margin: 5rem 2rem;
+        }
+
+        .card-button-container-desktop {
+            display: none;
         }
     }

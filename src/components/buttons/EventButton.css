@@ -1,3 +1,12 @@
+.coming-soon-button {
+    border-color: #E6E4D6;
+    background: #595959;
+    opacity: 0.2;
+    font-size: 14px;
+}
+
+
+/* event button */
 .event-content {
     gap: 15px;
     display: flex;
@@ -27,4 +36,38 @@
     text-align: left;
     font-size: 11px;
     line-height: 1.2;
+}
+
+.event-button>* {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.event-button:hover {
+    border: none;
+    background-color: #3F54D4;
+    box-shadow:
+        0 0 50px rgba(63, 84, 212, 1),
+        0 0 100px rgba(63, 84, 212, 0.8),
+        0 0 150px rgba(63, 84, 212, 0.3),
+        0 0 200px rgba(63, 84, 212, 0.1);
+    opacity: 1;
+}
+
+.event-button:hover>* {
+    opacity: 0;
+}
+
+.event-button:hover::after {
+    content: 'Book';
+    color: #E6E4D6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vw;
+    z-index: 1;
 }

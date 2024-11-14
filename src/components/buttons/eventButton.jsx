@@ -1,4 +1,3 @@
-// src/components/buttons/EventButton.js
 import React from 'react';
 import './EventButton.css';
 

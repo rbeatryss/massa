@@ -1,13 +1,29 @@
 .sound-card {
     height: auto;
+    /* min-height: 85vh;  */
     width: 80vw;
     padding: 20px;
     border-radius: 60px;
     color: #E6E4D6;
     text-align: start;
     margin: 0 auto;
-    background-color: #707735;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
 }
+
+.sound-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-color: rgba(238, 231, 159, 0.2);
+    z-index: 0;
+    pointer-events: none;
+  }
 
 .sound-card-container {
     margin: 1.5em 0;

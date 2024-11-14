@@ -8,10 +8,10 @@ const EventCard = ({ backgroundImage, title, eventName, eventDate, eventTime, ev
         <div className="event-card"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
-                backgroundSize: 'cover',
                 backgroundPosition: 'center',
+                backgroundSize: 'cover',
             }}>
-            <div className="event-card-before" style={{ background: beforeBackground || 'rgba(0, 0, 0, 0.3)' }}></div>
+            <div className="event-card-before" style={{ background: beforeBackground || 'rgba(47, 35, 8, 0.2)' }}></div>
             <div className="event-card-content-container">
                 <div className="event-card-title-name">
                     <p className="event-card-title">{title}</p>

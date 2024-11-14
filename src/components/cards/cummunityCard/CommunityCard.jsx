@@ -1,14 +1,9 @@
 import React from 'react';
 import './CommunityCard.css';
 
-const CommunityCard = ({ backgroundImage, date, post }) => {
+const CommunityCard = ({date, post }) => {
     return (
-        <div className="community-card"
-            style={{
-                backgroundImage: `url(${backgroundImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }}>
+        <div className="community-card">
             <div className="community-card-container">
                 <p className="community-card-date">{date}</p>
                 <p className="community-card-post">{post}</p>

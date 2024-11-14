@@ -1,11 +1,15 @@
 import React from 'react';
 import './SoundCard.css';
 import CustomButton from '../../buttons/CustomButton';
+import soundCard from '../../../assets/soundCard.svg'
 
 
-const SoundCard = ({ title, descriptor, list, backgroundImage }) => {
+const SoundCard = ({ title, descriptor, list }) => {
     return (
-        <div className="sound-card">
+        <div className="sound-card"
+        style={{
+            backgroundImage: `url(${soundCard})`,
+          }}>
         <div className="sound-card-container">
             <p className="sound-card-title">MC01</p>
             <p className="sound-card-descriptor">REJOICE - YOU ARE AT THE BEGINNING</p>

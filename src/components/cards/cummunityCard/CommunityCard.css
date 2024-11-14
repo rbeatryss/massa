@@ -1,4 +1,5 @@
 .community-card {
+    position: relative;
     height: auto;
     width: 80vw;
     padding: 20px;
@@ -6,7 +7,21 @@
     color: #E6E4D6;
     text-align: start;
     margin: 0rem auto;
+    background: linear-gradient(-70deg, #0A0000 0%, #312509 46%, #312509 46%, #3B2E12 67%, #59480F 100%);
+    background-size: cover;
 }
+.community-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-color: rgba(230, 228, 214, 0.1);
+    z-index: 0;
+    pointer-events: none;
+  }
 
 .community-card-container {
     margin: 2rem 0.5rem;

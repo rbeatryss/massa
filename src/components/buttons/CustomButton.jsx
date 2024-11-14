@@ -1,4 +1,3 @@
-// src/components/buttons/CustomButton.js
 import React, { useState, useEffect } from 'react';
 import './CustomButton.css';
 import EventButton from './eventButton';
@@ -18,10 +17,10 @@ const CustomButton = ({ buttonData, link, scrollAction, isSelected, onButtonClic
       ? 'icon-button'
       : 'action-button';
 
-  const [clicked, setClicked] = useState(isSelected); // Set initial state based on selection
+  const [clicked, setClicked] = useState(isSelected); 
 
   useEffect(() => {
-    setClicked(isSelected); // Update state when the button's selection status changes
+    setClicked(isSelected);
   }, [isSelected]);
 
   const handleClick = () => {
