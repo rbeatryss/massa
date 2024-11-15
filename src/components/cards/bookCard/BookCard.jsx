@@ -7,7 +7,6 @@ const BookCard = ({
   title,
   descriptor,
   description,
-  mobileDescription,
   desktopDescription,
   gradient,
   shadow,
@@ -78,7 +77,6 @@ const BookCard = ({
           <h3 className="book-card-descriptor">{descriptor}</h3>
         </div>
         <p className="book-card-description">{description}</p>
-        <p className="book-card-description-mobile">{mobileDescription}</p>
         <p className="book-card-description-desktop">{desktopDescription}</p>
       </div>
       <div className="book-card-button-container">

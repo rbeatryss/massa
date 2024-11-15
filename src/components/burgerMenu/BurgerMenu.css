@@ -34,7 +34,7 @@
   padding: 1em 1em;
   border-radius: 50px;
   background-color: rgba(238, 231, 159, 0.1);
-  border: 1px solid #8d8c81;
+  border: 0.5px solid #8d8c81;
   color: #E6E4D6;
   font-size: 14px;
   width: 9em;
@@ -59,7 +59,7 @@
   background: none;
   color: #E6E4D6;
   background-color: rgba(238, 231, 159, 0.1);
-  border: 1px solid #8d8c81;
+  border: 0.5px solid #8d8c81;
   font-size: 25px;
 }
 

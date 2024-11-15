@@ -2,7 +2,7 @@
     position: relative;
     width: 90vw;
     /* events card size */
-    min-height: 55vh;
+    min-height: 50vh;
     height: auto;
     flex: 0 0 auto;
     margin: 0 1.2rem;
@@ -13,6 +13,7 @@
     scroll-snap-align: center;
     overflow: hidden;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .event-card::before {
@@ -23,7 +24,6 @@
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    background-color: var(--overlay-color, rgba(59, 44, 9, 0.5));
     z-index: 0;
     pointer-events: none;
 }
@@ -76,7 +76,7 @@ p {
     }
 
     .event-card-button-container {
-        margin-bottom: 2rem;
+        margin: 2rem;
     }
 
     .event-card-title-name,

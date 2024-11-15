@@ -7,9 +7,11 @@ import soundCard from '../../../assets/soundCard.svg'
 const SoundCard = ({ title, descriptor, list }) => {
     return (
         <div className="sound-card"
-        // style={{
-        //     backgroundImage: `url(${soundCard})`,
-        //   }}
+        style={{
+            backgroundImage: `url(${soundCard})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
           >
         <div className="sound-card-content-container">
             <p className="sound-card-title">MC01</p>

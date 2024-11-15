@@ -5,7 +5,7 @@
     align-items: center;
     text-align: start;
     background-color: rgba(89, 89, 89, 0.3);
-    border: 1px solid #8d8c81;
+    border: 0.5px solid #8d8c81;
     border-radius: 20px;
     color: #E6E4D6;
     height: 3.5rem;
@@ -163,6 +163,11 @@
 
 @media (min-width: 1024px) {
     .small-button {
-        width: 7rem;
+        width: 8rem;
+        height: 4rem;
+        font-size: 1rem;
+    }
+    .custom-button {
+        border: 0.5px solid #8d8c81;
     }
 }

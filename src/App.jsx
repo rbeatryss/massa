@@ -14,8 +14,8 @@ import whiteCard from "./assets/whiteCard.svg";
 import greenCard from "./assets/green-test.svg";
 import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
-import eventBackground from "./assets/eventsIMG.png"
-import eventBackground2 from "./assets/eventImage2.jpg"
+import eventBackground from "./assets/eventBackground.png"
+import eventBackground2 from "./assets/eventBackground2.png"
 import logoWhite from "./assets/logoWhite.svg"
 import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
@@ -29,7 +29,6 @@ function App() {
       title: "Dark Side",
       descriptor: "Embrace the unseen",
       description: "Our first stage guides you through the hidden depths of the psyche, where catharsis is the beginning of the transformation journey.",
-      mobileDescription: "Our first stage guides you through the hidden depths of the psyche, where catharsis is the beginning of the transformation journey.",
       desktopDescription: "OUR FIRST STAGE GUIDES YOU THROUGH THE HIDDEN DEPTHS OF THE PSYCHE, WHERE CATHARSIS IS THE BEGINNING OF THE TRANSFORMATION JOURNEY.",
       buttons: [
         { type: 'event button', eventDate: '15/10', eventTime: '7-6pm', eventName: 'Void Movement  LA, Downton' },
@@ -49,15 +48,14 @@ function App() {
       title: "Dicovery",
       descriptor: "The Art of Illumination",
       description: "Bridging the conscious and unconscious through self-reflection: we delve into the world of dreams and symbols.",
-      mobileDescription: "Bridging the conscious and unconscious through self-reflection: we delve into the world of dreams and symbols.",
       desktopDescription: "BRIDGING THE CONSCIOUS AND UNCONSCIOUS THROUGH SELF-REFLECTION: WE DELVE INTO THE WORLD OF DREAMS AND SYMBOLS.",
       buttons: [
         { type: 'event button', eventDate: '05/10', eventTime: '7-6pm', eventName: 'Active imagination: Inner marketplace' },
         { type: 'event button', eventDate: '10/10', eventTime: '8-9pm', eventName: 'Breathwork: Light The Bulb' },
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Acupuncture and Sound' },
       ],
-      // backgroundImage: whiteCard,
-      backgroundImage: 'radial-gradient(circle, #E1CDC2 0%, #AFCADE 42%, #EEEEEE 100%)',
+      backgroundImage: whiteCard,
+      // backgroundImage: 'radial-gradient(circle, #E1CDC2 0%, #AFCADE 42%, #EEEEEE 100%)',
       overlayColor: 'rgba(255, 255, 255, 0.1)',
       //   shadow: `
       //   0 0 30px rgba(255, 255, 255, 0.3),  
@@ -69,7 +67,6 @@ function App() {
       title: "Learn",
       descriptor: "Conscious Connection",
       description: "Deepening our understanding of relationships and unraveling the artof aware interaction with the world.",
-      mobileDescription: "Deepening our understanding of relationships and unraveling the artof aware interaction with the world.",
       desktopDescription: "DEEPENING OUR UNDERSTANDING OF RELATIONSHIPS AND UNRAVELING THE ARTOF AWARE INTERACTION WITH THE WORLD.",
       buttons: [
         { type: 'event button', eventDate: '05/10', eventTime: '7-6pm', eventName: 'Contact Improvisation' },
@@ -88,7 +85,6 @@ function App() {
       title: "Growth",
       descriptor: "Fuse Transformation",
       description: "Advanced practices designed for those who have completed the first three stages. This phase invites you to integrate every lesson and embrace the full expression of who you are.",
-      mobileDescription: "Advanced practices designed for those who have completed the first three stages. This phase invites you to integrate every lesson and embrace the full expression of who you are.",
       desktopDescription: "ADVANCED PRACTICES DESIGNED FOR THOSE WHO HAVE COMPLETED THE FIRST THREE STAGES. THIS PHASE INVITES YOU TO INTEGRATE EVERY LESSON AND EMBRACE THE FULL EXPRESSION OF WHO YOU ARE.",
       buttons: [
         { type: 'coming soon', label: 'INVITE ONLY' },
@@ -207,6 +203,7 @@ function App() {
               title={card.title}
               descriptor={card.descriptor}
               description={card.description}
+              desktopDescription={card.desktopDescription}
               backgroundImage={card.backgroundImage}
               overlayColor={card.overlayColor}
               shadow={card.shadow}

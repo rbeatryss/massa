@@ -2,7 +2,7 @@
     position: relative;
     width: 90vw;
     /* size of the bookcard */
-    min-height: 85vh;
+    min-height: 78vh;
     height: auto;
     flex: 0 0 auto;
     margin: 0 1.2rem;
@@ -14,7 +14,6 @@
     background-size: cover;
     background-position: center;
     background-size: cover;
-    background-position: center;
     scroll-snap-align: center;
     flex-wrap: wrap;
 }
@@ -51,9 +50,10 @@
     flex-direction: column;
     align-items: center;
     margin-top: auto;
+    margin-bottom: 6.3rem;
 }
 
-.intro-book-card-paragraph,
+.intro-book-card-paragraph-one,
 .intro-book-card-paragraph-two {
     font-size: 3.5vw;
     margin-bottom: 2rem;
@@ -72,7 +72,7 @@
     .intro-book-card {
         width: 100%;
         height: auto;
-        min-height: 60vh;
+        min-height: 57vh;
         justify-self: center;
         margin: 0 auto;
         display: grid;
