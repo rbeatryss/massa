@@ -94,6 +94,7 @@
             font-weight: 500;
             margin-bottom: 2rem;
             text-align: right;
+            margin: auto 2rem auto auto;
         }
 
         .book-card-description {

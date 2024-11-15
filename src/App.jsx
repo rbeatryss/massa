@@ -216,7 +216,7 @@ function App() {
         </HorizontalScroll>
       </div>
       <div className="magic">
-        <h2 className="magic-title">Magic Rediscovered.</h2>
+        <h2 className="magic-title">Magic <br /> Rediscovered.</h2>
         {/* <h3 className="magic-description">
           WE BELIEVE THAT MAGIC IS NEVER FAR—<br></br>SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO<br></br>RISE BACK TO THE SURFACE. WHETHER YOU’RE<br></br>SEEKING PERSONAL TRANSFORMATION,<br></br>A BURST OF CREATIVE ENERGY,<br></br>OR ANSWERS TO DEEPER QUESTIONS, OUR<br></br>CREATIVE LAB IS WHERE THAT SOMETHING IS<br></br>WAITING TO BE KNOWN.
         </h3> */}
