@@ -16,7 +16,7 @@ import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
 import eventBackground from "./assets/eventsIMG.png"
 import eventBackground2 from "./assets/eventImage2.jpg"
-import logoLanding from "./assets/logoLanding.svg"
+import logoWhite from "./assets/logoWhite.svg"
 import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
 
@@ -38,12 +38,12 @@ function App() {
       ],
       backgroundImage: greenCard,
       overlayColor: 'rgba(105, 120, 94, 0.1)',
-    //   shadow: `
+      //   shadow: `
 
-    //   0 0 30px rgba(0, 0, 0, 0.3),  
-    //   0 0 50px rgba(0, 0, 0, 0.2),  
-    //   0 0 80px rgba(0, 0, 0, 0.1)
-    // `,
+      //   0 0 30px rgba(0, 0, 0, 0.3),  
+      //   0 0 50px rgba(0, 0, 0, 0.2),  
+      //   0 0 80px rgba(0, 0, 0, 0.1)
+      // `,
     },
     {
       title: "Dicovery",
@@ -56,13 +56,14 @@ function App() {
         { type: 'event button', eventDate: '10/10', eventTime: '8-9pm', eventName: 'Breathwork: Light The Bulb' },
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Acupuncture and Sound' },
       ],
-      backgroundImage: whiteCard,
-      overlayColor: 'rgba(255, 255, 255, 0.2)',
-    //   shadow: `
-    //   0 0 30px rgba(255, 255, 255, 0.3),  
-    //   0 0 50px rgba(255, 255, 255, 0.2),  
-    //   0 0 80px rgba(255, 255, 255, 0.1)
-    // `,
+      // backgroundImage: whiteCard,
+      backgroundImage: 'radial-gradient(circle, #E1CDC2 0%, #AFCADE 42%, #EEEEEE 100%)',
+      overlayColor: 'rgba(255, 255, 255, 0.1)',
+      //   shadow: `
+      //   0 0 30px rgba(255, 255, 255, 0.3),  
+      //   0 0 50px rgba(255, 255, 255, 0.2),  
+      //   0 0 80px rgba(255, 255, 255, 0.1)
+      // `,
     },
     {
       title: "Learn",
@@ -77,11 +78,11 @@ function App() {
       ],
       backgroundImage: yellowCard,
       overlayColor: 'rgba(234, 172, 91, 0.1)',
-    //   shadow: `
-    //     0 0 30px rgba(0, 0, 0, 0.8),
-    //     0 0 50px rgba	(186, 129, 31, 1),
-    //     0 0 80px rgba(0, 0, 0, 0.3)
-    // `,
+      //   shadow: `
+      //     0 0 30px rgba(0, 0, 0, 0.8),
+      //     0 0 50px rgba	(186, 129, 31, 1),
+      //     0 0 80px rgba(0, 0, 0, 0.3)
+      // `,
     },
     {
       title: "Growth",
@@ -95,20 +96,19 @@ function App() {
       backgroundImage: redCard,
       overlayColor: 'rgba(224, 164, 87, 0.1)',
 
-    //   shadow: `
-    //   0 0 30px rgba(0, 0, 0, 0.3),  
-    //   0 0 50px rgba(0, 0, 0, 0.2),  
-    //   0 0 80px rgba(0, 0, 0, 0.1)
-    // `,
+      //   shadow: `
+      //   0 0 30px rgba(0, 0, 0, 0.3),  
+      //   0 0 50px rgba(0, 0, 0, 0.2),  
+      //   0 0 80px rgba(0, 0, 0, 0.1)
+      // `,
     },
   ];
   const eventCardData = [
     {
       backgroundImage: eventBackground,
-      beforeBackground: "rgba(56, 33, 0, 0.5)",
       title: "MASSA CONFUSA",
       eventName: "Modular Sound Bath",
-      eventDate: "Saturday, September 7th",
+      eventDate: "Saturday, September 7th",
       eventTime: "6:45pm-7:45pm",
       eventAddress1Line: "Long Beach Rising",
       eventAddress2Line: "205 E Anaheim St, Long Beach, CA 90813",
@@ -116,9 +116,20 @@ function App() {
     },
     {
       backgroundImage: eventBackground2,
+      overlayColor: 'rgba(67, 12, 22, 0.5)',
       title: "MASSA CONFUSA",
       eventName: "Modular Sound Bath",
-      eventDate: "Saturday, September 7th",
+      eventDate: "Saturday, September 7th",
+      eventTime: "6:45pm-7:45pm",
+      eventAddress1Line: "Long Beach Rising",
+      eventAddress2Line: "205 E Anaheim St, Long Beach, CA 90813",
+      description: "Please arrive promptly at 6:30pm to not disrupt the sound bath experience. You are welcome to bring your own mat, cushion, and blanket or use the built in mat floor for cushion."
+    },
+    {
+      backgroundImage: eventBackground,
+      title: "MASSA CONFUSA",
+      eventName: "Modular Sound Bath",
+      eventDate: "Saturday, September 7th",
       eventTime: "6:45pm-7:45pm",
       eventAddress1Line: "Long Beach Rising",
       eventAddress2Line: "205 E Anaheim St, Long Beach, CA 90813",
@@ -128,7 +139,7 @@ function App() {
   const communityCardData = [
     {
       date: "11.09.24",
-      post: "Welcome to Massa Confusa, a transformative experience grounded in the ancient philosophy of alchemy. The concept of massa confusa, originating from the alchemical process, represents the chaotic, unformed matter at the beginning of profound transformation. Alchemists believed that nature was not soulless, and their work was a reflection of inner psychic processes. This philosophy offers a powerful lens for understanding the nature of psychic change. The journey begins with nigredo, or 'blackness'—the initial stage where old forms decay into dark chaos. Carl Jung, drawing upon this alchemical tradition, saw nigredo as a crucial part of the human psyche's evolution, referring to it as the necessary darkness at the beginning of deep inner work."
+      post: "a transformative experience grounded in the ancient philosophy of alchemy. The concept of massa confusa, originating from the alchemical process, represents the chaotic, unformed matter at the beginning of profound transformation. Alchemists believed that nature was not soulless, and their work was a reflection of inner psychic processes. This philosophy offers a powerful lens for understanding the nature of psychic change. The journey begins with nigredo, or 'blackness'—the initial stage where old forms decay into dark chaos. Carl Jung, drawing upon this alchemical tradition, saw nigredo as a crucial part of the human psyche's evolution, referring to it as the necessary darkness at the beginning of deep inner work."
     }
   ];
 
@@ -181,7 +192,7 @@ function App() {
       </header>
       <div className="about">
         <div className="about-description">
-          <h3>MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
+          <h3>MASSA           CONFUSA            IS         A           LOS          ANGELES         BASED        CREATIVE          LABORATORY          EXPLORING         THE        SUBTLE          ART          OF<br />TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
         </div>
         <div className="about-title">
           <h1>MASSA CONFUSA</h1>
@@ -206,18 +217,25 @@ function App() {
       </div>
       <div className="magic">
         <h2 className="magic-title">Magic Rediscovered.</h2>
+        {/* <h3 className="magic-description">
+          WE BELIEVE THAT MAGIC IS NEVER FAR—<br></br>SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO<br></br>RISE BACK TO THE SURFACE. WHETHER YOU’RE<br></br>SEEKING PERSONAL TRANSFORMATION,<br></br>A BURST OF CREATIVE ENERGY,<br></br>OR ANSWERS TO DEEPER QUESTIONS, OUR<br></br>CREATIVE LAB IS WHERE THAT SOMETHING IS<br></br>WAITING TO BE KNOWN.
+        </h3> */}
         <h3 className="magic-description">
           WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
         </h3>
+        {/* <h3 className="magic-description-desktop">
+          WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
+        </h3> */}
       </div>
       <div ref={eventsRef} className="events">
         <h2 className='events-title'>Events</h2>
-        <div className="horizontal-scroll">
+        <div className="events-horizontal-scroll">
           {eventCardData.map((card, index) => (
             <EventCard
               key={index}
               backgroundImage={card.backgroundImage}
               beforeBackground={card.beforeBackground}
+              overlayColor={card.overlayColor}
               title={card.title}
               eventName={card.eventName}
               eventDate={card.eventDate}
@@ -244,22 +262,56 @@ function App() {
             post={card.post}
           />
         ))}
-
       </div>
-      {/* <div className="text">
-        <h3 className="text-animation">
-        </h3>
-      </div> */}
+      <div class="text">
+        <h3 class="text-animation indent-right-1">FROM MEDITATIVE JOURNEYS</h3>
+        <h3 class="text-animation indent-right-2">TO PHILOSOPHICAL</h3>
+        <h3 class="text-animation indent-right-3">DEEP-DIVES, AND</h3>
+        <h3 class="text-animation indent-right-4">IMMERSIVE</h3>
+        <h3 class="text-animation indent-right-5">SOUNDSCAPES</h3>
+        <h3 class="text-animation indent-right-6">THAT GUIDE</h3>
+        <h3 class="text-animation indent-right-7">YOUR</h3>
+
+        <h3 class="text-animation indent-left-1">INTROSPECTION,</h3>
+        <h3 class="text-animation indent-left-2">WE CURATE</h3>
+        <h3 class="text-animation indent-left-3">EXPERIENCES</h3>
+        <h3 class="text-animation indent-left-4">DESIGNED TO</h3>
+        <h3 class="text-animation indent-left-5">EXPAND YOUR</h3>
+        <h3 class="text-animation indent-left-6">PERCEPTION AND</h3>
+
+        <h3 class="text-animation indent-right-7">CONSCIOUSNESS.</h3>
+        <h3 class="text-animation indent-right-8">WHETHER</h3>
+        <h3 class="text-animation indent-right-9">THROUGH THE</h3>
+        <h3 class="text-animation indent-right-10">STILLNESS OF A TEA</h3>
+        <h3 class="text-animation indent-right-11">RITUAL OR THE</h3>
+        <h3 class="text-animation indent-right-12">DYNAMIC</h3>
+
+        <h3 class="text-animation indent-left-7">EXPRESSION</h3>
+        <h3 class="text-animation indent-left-8">OF MOVEMENT,</h3>
+        <h3 class="text-animation indent-left-9">EVERY ELEMENT</h3>
+        <h3 class="text-animation indent-left-10">INVITES YOU TO</h3>
+        <h3 class="text-animation indent-left-11">ENGAGE CREATIVE</h3>
+        <h3 class="text-animation indent-left-12">VISION AND STEP INTO THE</h3>
+
+        <h3 class="text-animation indent-right-13">ALCHEMICAL</h3>
+        <h3 class="text-animation indent-right-14">PROCESS OF</h3>
+        <h3 class="text-animation indent-right-15">SELF-DISCOVERY.</h3>
+
+        {/* <h3 className="text-animation">
+        FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS. WHETHER THROUGH THE STILLNESS OF A TEA RITUAL OR THE DYNAMIC EXPRESSION OF MOVEMENT, EVERY ELEMENT INVITES YOU TO ENGAGE CREATIVE VISION AND STEP INTO THE ALCHEMICAL PROCESS OF SELF-DISCOVERY.
+        </h3> */}
+      </div>
       <div ref={aboutRef} className="closing">
-        <img src={logoLanding} />
+        <img src={logoWhite} />
         <h3 className="quote">
-          MASSA CONFUSA IS A SPACE FOR HOLISTIC EXPLORATION, WHERE WE EMBRACE THE UNKNOWN AS A DRIVING FORCE THROUGH EXPERIMENTATION, OBSERVATION, AND PRACTICE.
+          MASSA CONFUSA IS<br></br>A SPACE FOR<br></br>HOLISTIC EXPLORATION, <br></br>WHERE WE EMBRACE<br></br>THE UNKNOWN<br></br>AS A DRIVING FORCE<br></br>THROUGH<br></br>EXPERIMENTATION,<br></br>OBSERVATION, AND PRACTICE.
         </h3>
-        <div className="title">
-          <h1>MASSA CONFUSA</h1>
-        </div>
+        <h3 className="quote-desktop">
+          MASSA CONFUSA IS A SPACE FOR HOLISTIC <br></br>EXPLORATION, WHERE WE EMBRACE<br></br>THE UNKNOWNAS A DRIVING FORCE THROUGH<br></br>EXPERIMENTATION,OBSERVATION, AND <br></br>PRACTICE.
+        </h3>
       </div>
       <footer>
+          <h1 className="footer-title">MASSA<br></br>CONFUSA</h1>        
         <div className="footer-container">
           <p className='date'>©2024</p>
           <div className='btn-container'>

@@ -1,8 +1,7 @@
 .book-card {
         position: relative;
         width: 90vw;
-        /* size of the bookcard */
-        min-height: 85vh; 
+        /* min-height: 80vh;  */
         height: auto; 
         flex: 0 0 auto;
         margin: 0 1.2rem;
@@ -10,9 +9,6 @@
         flex-direction: column;
         border-radius: 60px;
         color: rgb(254, 254, 254);
-        /* background: url('../../../assets/exploreBackground.png'); */
-        /* background-size: cover;
-        background-position: center; */
         scroll-snap-align: center;
         flex-wrap: wrap;
         /* overflow: hidden; */

@@ -3,15 +3,15 @@ import './EventCard.css';
 import CustomButton from '../../buttons/CustomButton';
 
 
-const EventCard = ({ backgroundImage, title, eventName, eventDate, eventTime, eventAddress1Line, eventAddress2Line, description, beforeBackground }) => {
+const EventCard = ({ backgroundImage, title, eventName, eventDate, eventTime, eventAddress1Line, eventAddress2Line, description, overlayColor, }) => {
     return (
         <div className="event-card"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
+                '--overlay-color': overlayColor,
             }}>
-            <div className="event-card-before" style={{ background: beforeBackground || 'rgba(47, 35, 8, 0.2)' }}></div>
             <div className="event-card-content-container">
                 <div className="event-card-title-name">
                     <p className="event-card-title">{title}</p>
@@ -28,10 +28,10 @@ const EventCard = ({ backgroundImage, title, eventName, eventDate, eventTime, ev
                 <div className="event-card-description">
                     <p className="event-card-description">{description}</p>
                 </div>
-            </div>
-            <div className="event-card-button-container">
-                <CustomButton buttonData={{ type: 'small button', label: 'Book' }} />
-                {/* {buttons.map((button, index) => {
+
+                <div className="event-card-button-container">
+                    <CustomButton buttonData={{ type: 'small button', label: 'Book' }} />
+                    {/* {buttons.map((button, index) => {
                     return (
                         <CustomButton
                             key={index}
@@ -43,6 +43,7 @@ const EventCard = ({ backgroundImage, title, eventName, eventDate, eventTime, ev
                         />
                     );
                 })} */}
+                </div>
             </div>
         </div>
     );

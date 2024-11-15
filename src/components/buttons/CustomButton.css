@@ -85,7 +85,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1vw;
+    /* book button font */
+    font-size: 0.8rem !important;
     z-index: 1;
 }
 
@@ -126,7 +127,6 @@
     color: #E6E4D6;
     background-color: rgba(238, 231, 159, 0.1);
     border: 1px solid #8d8c81;
-
 }
 
 .small-button:active {
@@ -159,4 +159,10 @@
 
 .icon {
     font-size: 1.5em;
+}
+
+@media (min-width: 1024px) {
+    .small-button {
+        width: 7rem;
+    }
 }

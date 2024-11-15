@@ -1,15 +1,15 @@
 .sound-card {
+    display: flex;
+    position: relative;
     height: auto;
     /* min-height: 85vh;  */
-    width: 80vw;
-    padding: 20px;
+    width: 90vw;
+    flex: 0 0 auto;
+    margin: 0 auto;
     border-radius: 60px;
     color: #E6E4D6;
     text-align: start;
-    margin: 0 auto;
-    background-size: cover;
-    background-position: center;
-    position: relative; 
+    background: radial-gradient(#414A1E 24%, #596A23 58%, #667023 65%, #6E7824 90% );
 }
 
 .sound-card::before {
@@ -23,16 +23,10 @@
     background-color: rgba(238, 231, 159, 0.2);
     z-index: 0;
     pointer-events: none;
-  }
-
-.sound-card-container {
-    margin: 1.5em 0;
 }
 
-.sound-card-title,
-.sound-card-descriptor {
-    margin: 0;
-    font-size: 3.3vw;
+.sound-card-content-container {
+    margin: 3rem 2rem;
 }
 
 .sound-card-descriptor {
@@ -47,10 +41,33 @@ li {
     font-size: 3.4vw;
 }
 
+.sound-card-list-container {
+    margin-bottom: 3rem;
+}
+
 .sound-card-button-container {
     display: flex;
     justify-content: end;
-    align-items: center;
-    margin-top: auto; 
-    margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+
+    li {
+        font-size: 1.2rem;
+    }
+
+    .sound-card {
+        width: 100%;
+        height: auto;
+        min-height: 60vh;
+        margin: 0 auto;
+    }
+
+    .sound-card-content-container {
+        width: 100%;
+    }
+
+    .sound-card-button-container {
+        align-self: end;
+    }
 }
