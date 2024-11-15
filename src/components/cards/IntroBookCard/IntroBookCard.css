@@ -1,19 +1,18 @@
 .intro-book-card {
+    display: flex;
     position: relative;
     width: 90vw;
     /* size of the bookcard */
-    min-height: 78vh;
     height: auto;
+    min-height: 78vh;
     flex: 0 0 auto;
     margin: 0 1.2rem;
-    display: flex;
     flex-direction: column;
     border-radius: 60px;
     color: rgb(254, 254, 254);
     background: url('../../../assets/exploreBackground.png');
     background-size: cover;
     background-position: center;
-    background-size: cover;
     scroll-snap-align: center;
     flex-wrap: wrap;
 }

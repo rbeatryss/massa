@@ -1,8 +1,7 @@
 .event-card {
+    display: flex;
     position: relative;
     width: 90vw;
-    /* events card size */
-    min-height: 50vh;
     height: auto;
     flex: 0 0 auto;
     margin: 0 1.2rem;
@@ -12,8 +11,8 @@
     color: rgb(254, 254, 254);
     scroll-snap-align: center;
     overflow: hidden;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+    /* box-sizing: border-box;
+    flex-wrap: wrap; */
 }
 
 .event-card::before {
@@ -63,8 +62,7 @@ p {
 @media (min-width: 1024px) {
     .event-card {
         /* events card size */
-        min-width: 30%;
-        max-width: 32vw;
+        min-width: 32%;
         min-height: 52vh;
         height: auto;
         flex: 1 1 auto;

@@ -45,12 +45,6 @@ h3 {
   color: #E6E4D6;
 }
 
-/* h4 {
-  font-size: 3.9vw;
-  font-weight: 400;
-  color: #E6E4D6;
-} */
-
 p {
   font-size: 3.6vw;
   color: #E6E4D6;
@@ -70,10 +64,9 @@ p {
   margin: 8rem 1.2rem;
 }
 
-.about{
+.about {
   margin: auto 1.2rem;
 }
-
 
 .about {
   display: flex;
@@ -82,8 +75,6 @@ p {
   /* height: 71vh; */
 }
 
-
-
 .about-description {
   font-weight: 400;
   text-align: justify;
@@ -91,10 +82,6 @@ p {
   /* distance between massa and descrip */
   margin-bottom: 20rem;
   white-space: normal;
-}
-
-.about-title {
-  /* margin-top: 10rem; */
 }
 
 .events-title,
@@ -130,6 +117,21 @@ p {
 .events-horizontal-scroll::-webkit-scrollbar {
   display: none;
   cursor: grab;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.text-animation-desktop {
+  display: none;
+}
+.text-animation{
+  margin-right: 1rem;
 }
 
 .closing {
@@ -210,12 +212,12 @@ footer {
 
 /* text animation */
 
-.text-animation {
+/* .text-animation {
   color: #E6E4D6;
   line-height: 106%;
   margin: 0;
   white-space: nowrap;
-}
+} */
 
 .text-animation:nth-child(1) {
   text-indent: 1rem;
@@ -498,14 +500,14 @@ footer {
   }
 
   .events-title,
-.sounds-title,
-.community-title,
-.magic-title,
-.sounds-title,
-.quote {
-  margin: 1rem 2.5rem 4rem;
-  word-wrap: break-word;
-}
+  .sounds-title,
+  .community-title,
+  .magic-title,
+  .sounds-title,
+  .quote {
+    margin: 1rem 2.5rem 4rem;
+    word-wrap: break-word;
+  }
 
   .about {
     height: 100vh;
@@ -553,7 +555,16 @@ footer {
     justify-content: space-between;
     overflow-x: hidden;
     flex-wrap: nowrap;
-    /* padding: 1rem; */
+  }
+
+  .text-animation-desktop {
+    display: flex;
+    width: 95%;
+    margin-left: 4rem;
+  }
+
+  .text-animation {
+    display: none;
   }
 
   .quote {
@@ -573,8 +584,9 @@ footer {
     color: #fff;
     padding: 2rem 1.2rem 3rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-title {

@@ -16,6 +16,8 @@ import yellowCard from "./assets/yellowCard.svg";
 import redCard from "./assets/redCard.svg";
 import eventBackground from "./assets/eventBackground.png"
 import eventBackground2 from "./assets/eventBackground2.png"
+import textAnimationDesktop from "./assets/text-animation-desktop.svg"
+import textAnimation from "./assets/text-animation.svg"
 import logoWhite from "./assets/logoWhite.svg"
 import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
@@ -260,8 +262,10 @@ function App() {
           />
         ))}
       </div>
-      <div class="text">
-        <h3 class="text-animation indent-right-1">FROM MEDITATIVE JOURNEYS</h3>
+      <div className="text">
+      <img className="text-animation" src={textAnimation} />
+      <img className="text-animation-desktop"src={textAnimationDesktop} />
+        {/* <h3 class="text-animation indent-right-1">FROM MEDITATIVE JOURNEYS</h3>
         <h3 class="text-animation indent-right-2">TO PHILOSOPHICAL</h3>
         <h3 class="text-animation indent-right-3">DEEP-DIVES, AND</h3>
         <h3 class="text-animation indent-right-4">IMMERSIVE</h3>
@@ -292,7 +296,7 @@ function App() {
 
         <h3 class="text-animation indent-right-13">ALCHEMICAL</h3>
         <h3 class="text-animation indent-right-14">PROCESS OF</h3>
-        <h3 class="text-animation indent-right-15">SELF-DISCOVERY.</h3>
+        <h3 class="text-animation indent-right-15">SELF-DISCOVERY.</h3> */}
 
         {/* <h3 className="text-animation">
         FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS. WHETHER THROUGH THE STILLNESS OF A TEA RITUAL OR THE DYNAMIC EXPRESSION OF MOVEMENT, EVERY ELEMENT INVITES YOU TO ENGAGE CREATIVE VISION AND STEP INTO THE ALCHEMICAL PROCESS OF SELF-DISCOVERY.
