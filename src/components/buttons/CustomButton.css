@@ -12,6 +12,7 @@
     padding: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    cursor: auto;
 }
 
 /* coming soon button */
@@ -21,7 +22,6 @@
     opacity: 0.2;
     font-size: 14px;
 }
-
 
 /* event button */
 .event-content {
@@ -60,15 +60,17 @@
     transition: opacity 0.3s ease;
 }
 
-.event-button:hover {
+.event-button:hover,
+.event-button:active {
     border: none;
-    background-color: #3F54D4;
+    background-color: #3F54D4 !important;
     box-shadow:
         0 0 50px rgba(63, 84, 212, 1),
         0 0 100px rgba(63, 84, 212, 0.8),
         0 0 150px rgba(63, 84, 212, 0.3),
         0 0 200px rgba(63, 84, 212, 0.1);
     opacity: 1;
+    z-index: 1;
 }
 
 .event-button:hover>* {
@@ -112,14 +114,11 @@
         font-size: 1rem;
         z-index: 0;
     }
-
-    /* .event-button:active {
-        opacity: 0.8;
-    } */
 }
 
-/* text button */
-.small-button {
+/* text and blue text buttons */
+.text-button,
+.blue-text-button {
     width: 30%;
     height: auto;
     justify-content: center;
@@ -129,58 +128,32 @@
     border: 1px solid #8d8c81;
 }
 
-.small-button.bright::after {
-    content: 'Book';
-    color: #E6E4D6;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1rem;
-    z-index: 0;
-}
-
-.small-button:active {
+.text-button:active, 
+.text-button:hover {
     background-color: rgba(238, 231, 159, 0.3);
 }
 
-.small-button:hover {
-    background-color: rgba(238, 231, 159, 0.3);
-}
-
-/* icon button */
-.icon-button {
-    width: 30%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    color: #E6E4D6;
-    background-color: rgba(238, 231, 159, 0.1);
-    border: 1px solid #8d8c81;
-}
-
-.icon-button:hover {
-    background-color: rgba(238, 231, 159, 0.2);
-}
-
-.icon-button:active {
-    background-color: rgba(238, 231, 159, 0.3);
-}
-
-.icon {
-    font-size: 1.5em;
+.blue-text-button:active, 
+.blue-text-button:hover {
+    border: none;
+    background-color: #3F54D4 !important;
+    box-shadow:
+        0 0 50px rgba(63, 84, 212, 1),
+        0 0 100px rgba(63, 84, 212, 0.8),
+        0 0 150px rgba(63, 84, 212, 0.3),
+        0 0 200px rgba(63, 84, 212, 0.1);
+    opacity: 1;
+    z-index: 1;
 }
 
 @media (min-width: 1024px) {
-    .small-button {
+    .text-button, 
+    .blue-text-button {
         width: 8rem;
         height: 4rem;
         font-size: 1rem;
     }
+
     .custom-button {
         border: 0.5px solid #8d8c81;
     }

@@ -35,7 +35,7 @@ const SoundCard = ({ title, descriptor, list }) => {
                 </ul>
             </div>
             <div className="sound-card-button-container">
-            <CustomButton buttonData={{ type: 'small button', label: 'Listen' }} />
+            <CustomButton buttonData={{ type: 'text button', label: 'Listen' }} />
             </div>
         </div>
         </div>

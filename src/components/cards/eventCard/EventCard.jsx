@@ -30,7 +30,7 @@ const EventCard = ({ backgroundImage, title, eventName, eventDate, eventTime, ev
                 </div>
 
                 <div className="event-card-button-container">
-                    <CustomButton buttonData={{ type: 'small button', label: 'Book' }} />
+                    <CustomButton buttonData={{ type: 'blue text button', label: 'Book' }} />
                     {/* {buttons.map((button, index) => {
                     return (
                         <CustomButton

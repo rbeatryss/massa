@@ -13,10 +13,10 @@ const BookCardButtonContainerDesktop = ({ buttonData }) => {
                 <div className="desktop-button-card-event-details">
                     <div className="desktop-button-card-date-time">
                         <h3 className="desktop-button-event-date">{eventDate}</h3>
-                        <span className="desktop-button-event-time">{eventTime}</span>
+                        <h3 className="desktop-button-event-time">{eventTime}</h3>
                     </div>
                     <div className="desktop-button-card-button">
-                        <CustomButton buttonData={{ type: 'small button', label: 'Book' }} />
+                        <CustomButton buttonData={{ type: 'blue text button', label: 'Book' }} />
                     </div>
                 </div>
             </div>

@@ -1,47 +1,58 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import './CustomButton.css';
 import EventButton from './eventButton';
 
 
-const CustomButton = ({ buttonData, link, scrollAction, isSelected, onButtonClick, index }) => {
-  const { type, eventName, eventDate, eventTime, label, icon } = buttonData;
+const CustomButton = ({ buttonData }) => {
+  const { type, link, eventName, eventDate, eventTime, label, backgroundColor, content } = buttonData;
 
   const buttonClass =
     type === 'coming soon'
       ? 'coming-soon-button'
       : type === 'event button'
-      ? 'event-button'
-      : type === 'small button'
-      ? 'small-button'
-      : type === 'icon button'
-      ? 'icon-button'
-      : 'action-button';
+        ? 'event-button'
+        : type === 'blue text button'
+          ? 'blue-text-button'
+          : type === 'text button'
+            ? 'text-button'
+            : type === 'icon button'
+              ? 'icon-button'
+              : 'custom-button';
 
-  const [clicked, setClicked] = useState(isSelected); 
+  const isDisabled = type === 'coming soon';
 
-  useEffect(() => {
-    setClicked(isSelected);
-  }, [isSelected]);
+  // const [clicked, setClicked] = useState(isSelected); 
 
-  const handleClick = () => {
-    if (scrollAction) {
-      scrollAction();
-    } else {
-      setClicked(true);
-      onButtonClick(index); 
-    }
-  };
+  // useEffect(() => {
+  //   setClicked(isSelected);
+  // }, [isSelected]);
+
+  // const handleClick = () => {
+  //   if (scrollAction) {
+  //     scrollAction();
+  //   } else {
+  //     setClicked(true);
+  //     onButtonClick(index); 
+  //   }
+  // };
 
   return (
     <button
-      className={`custom-button ${buttonClass} ${clicked ? 'bright' : ''}`}
-      onClick={handleClick}
+      className={`custom-button ${buttonClass} }`}
+      // onClick={handleClick}
+      style={{ backgroundColor: backgroundColor }}
+      disabled={isDisabled}
     >
       {type === 'event button' && eventName && eventDate && eventTime ? (
-        <EventButton eventName={eventName} eventDate={eventDate} eventTime={eventTime} />
-      ) : type === 'icon button' && icon ? (
-        <span className="icon">
-          <img src={icon} alt="icon" />
+        <EventButton
+          eventName={eventName}
+          eventDate={eventDate}
+          eventTime={eventTime}
+          content={content} 
+        />
+      ) : type === 'blue text button' && label ? (
+        <span>
+          {label} {content && <span className="pseudo-content">({content})</span>}
         </span>
       ) : (
         <span>{label}</span>

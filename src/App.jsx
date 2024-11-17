@@ -33,9 +33,9 @@ function App() {
       description: "Our first stage guides you through the hidden depths of the psyche, where catharsis is the beginning of the transformation journey.",
       desktopDescription: "OUR FIRST STAGE GUIDES YOU THROUGH THE HIDDEN DEPTHS OF THE PSYCHE, WHERE CATHARSIS IS THE BEGINNING OF THE TRANSFORMATION JOURNEY.",
       buttons: [
-        { type: 'event button', eventDate: '15/10', eventTime: '7-6pm', eventName: 'Void Movement LA, Downton' },
-        { type: 'event button', eventDate: '10/10', eventTime: '8-9pm', eventName: 'Tea in Darkness' },
-        { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Lecture on shadow with Manoj Dias' },
+        { type: 'event button', eventDate: '15/10', eventTime: '7-6pm', eventName: 'Void Movement LA, Downton', backgroundColor:'rgba(0, 0, 0, 0.2)' },
+        { type: 'event button', eventDate: '10/10', eventTime: '8-9pm', eventName: 'Tea in Darkness', backgroundColor:'rgba(0, 0, 0, 0.2)'},
+        { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Lecture on shadow with Manoj Dias', backgroundColor:'rgba(0, 0, 0, 0.2)' },
       ],
       backgroundImage: greenCard,
       overlayColor: 'rgba(105, 120, 94, 0.1)',
@@ -47,12 +47,12 @@ function App() {
       // `,
     },
     {
-      title: "Dicovery",
+      title: "Discovery",
       descriptor: "The Art of Illumination",
       description: "Bridging the conscious and unconscious through self-reflection: we delve into the world of dreams and symbols.",
       desktopDescription: "BRIDGING THE CONSCIOUS AND UNCONSCIOUS THROUGH SELF-REFLECTION: WE DELVE INTO THE WORLD OF DREAMS AND SYMBOLS.",
       buttons: [
-        { type: 'event button', eventDate: '05/10', eventTime: '7-6pm', eventName: 'Active imagination: Inner marketplace' },
+        { type: 'event button', eventDate: '05/10', eventTime: '7-6pm', eventName: 'Active imagination: Inner marketplace', content: 'Sold out'},
         { type: 'event button', eventDate: '10/10', eventTime: '8-9pm', eventName: 'Breathwork: Light The Bulb' },
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Acupuncture and Sound' },
       ],
