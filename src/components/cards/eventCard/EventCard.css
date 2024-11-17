@@ -62,7 +62,7 @@ p {
     .event-card {
         /* events card size */
         min-width: 32%;
-        min-height: 52vh;
+        /* min-height: 50vh; */
         height: auto;
         flex: 1 1 auto;
         margin: 0;

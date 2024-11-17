@@ -61,7 +61,7 @@ li {
         width: 100%;
         height: auto;
         min-height: 60vh;
-        padding: 3rem 2rem 0;
+        padding: 3rem 0 0 2rem;
         overflow: auto; 
     }
 
