@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import './BookCard.css';
 import CustomButton from '../../buttons/CustomButton';
-import EventButtonDesktop from '../../buttons/eventButtonDesktop/EventButtonDesktop';
+import BookCardButtonContainerDesktop from '../../bookCardButtonContainerDesktop/BookCardButtonContainerDesktop';
 
 const BookCard = ({
   title,
@@ -15,48 +15,11 @@ const BookCard = ({
   backgroundImage,
 }) => {
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const cardRef = React.useRef(null); 
+  const cardRef = useRef(null);
 
   const handleButtonClick = (index) => {
     setSelectedButtonIndex(index);
   };
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-    checkScreenSize();
-
-    window.addEventListener('resize', checkScreenSize); 
-
-    return () => {
-      window.removeEventListener('resize', checkScreenSize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setSelectedButtonIndex(); 
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div
@@ -79,6 +42,8 @@ const BookCard = ({
         <p className="book-card-description">{description}</p>
         <p className="book-card-description-desktop">{desktopDescription}</p>
       </div>
+
+      {/* Mobile button container */}
       <div className="book-card-button-container">
         {buttons.map((buttonData, index) => (
           <CustomButton
@@ -90,19 +55,16 @@ const BookCard = ({
           />
         ))}
       </div>
-      {!isMobile && (
-        <div className="book-card-button-container-desktop">
-          {buttons.map((buttonData, index) => (
-            <EventButtonDesktop
-              key={index}
+      {/* Desktop button container */}
+      <div className="book-card-button-container-desktop">
+        {buttons.map((buttonData, index) => (
+          <div key={index} className="button-wrapper">
+            <BookCardButtonContainerDesktop
               buttonData={buttonData}
-              index={index}
-              isSelected={selectedButtonIndex === index}
-              onButtonClick={handleButtonClick}
             />
-          ))}
-        </div>
-      )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

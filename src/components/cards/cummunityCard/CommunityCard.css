@@ -1,6 +1,7 @@
 .community-card {
     display: flex;
     position: relative;
+    width: 90vw;
     height: auto;
     flex: 0 0 auto;
     margin: 0 auto;
@@ -8,6 +9,7 @@
     color: #E6E4D6;
     text-align: start;
     background: linear-gradient(-90deg, #0A0000 0%, #312509 46%, #3B2E12 67%, #59480F 92%);
+    box-sizing: border-box;
 }
 
 .community-card::before {
@@ -18,7 +20,6 @@
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    /* background-color: rgba(230, 228, 214, 0.1); */
     z-index: 1;
     pointer-events: none;
 }

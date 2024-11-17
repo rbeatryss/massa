@@ -129,6 +129,20 @@
     border: 1px solid #8d8c81;
 }
 
+.small-button.bright::after {
+    content: 'Book';
+    color: #E6E4D6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    z-index: 0;
+}
+
 .small-button:active {
     background-color: rgba(238, 231, 159, 0.3);
 }

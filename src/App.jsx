@@ -33,7 +33,7 @@ function App() {
       description: "Our first stage guides you through the hidden depths of the psyche, where catharsis is the beginning of the transformation journey.",
       desktopDescription: "OUR FIRST STAGE GUIDES YOU THROUGH THE HIDDEN DEPTHS OF THE PSYCHE, WHERE CATHARSIS IS THE BEGINNING OF THE TRANSFORMATION JOURNEY.",
       buttons: [
-        { type: 'event button', eventDate: '15/10', eventTime: '7-6pm', eventName: 'Void Movement  LA, Downton' },
+        { type: 'event button', eventDate: '15/10', eventTime: '7-6pm', eventName: 'Void Movement LA, Downton' },
         { type: 'event button', eventDate: '10/10', eventTime: '8-9pm', eventName: 'Tea in Darkness' },
         { type: 'event button', eventDate: '15/10', eventTime: '4-5pm', eventName: 'Lecture on shadow with Manoj Dias' },
       ],
@@ -192,6 +192,10 @@ function App() {
         <div className="about-description">
           <h3>MASSA           CONFUSA            IS         A           LOS          ANGELES         BASED        CREATIVE          LABORATORY          EXPLORING         THE        SUBTLE          ART          OF<br />TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
         </div>
+        {/* <div className="about-description-desktop">
+          <h3 className="about-description-desktop-one">MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF </h3>
+          <h3 className="about-description-desktop-two">TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
+        </div> */}
         <div className="about-title">
           <h1>MASSA CONFUSA</h1>
         </div>
@@ -265,42 +269,6 @@ function App() {
       <div className="text">
       <img className="text-animation" src={textAnimation} />
       <img className="text-animation-desktop"src={textAnimationDesktop} />
-        {/* <h3 class="text-animation indent-right-1">FROM MEDITATIVE JOURNEYS</h3>
-        <h3 class="text-animation indent-right-2">TO PHILOSOPHICAL</h3>
-        <h3 class="text-animation indent-right-3">DEEP-DIVES, AND</h3>
-        <h3 class="text-animation indent-right-4">IMMERSIVE</h3>
-        <h3 class="text-animation indent-right-5">SOUNDSCAPES</h3>
-        <h3 class="text-animation indent-right-6">THAT GUIDE</h3>
-        <h3 class="text-animation indent-right-7">YOUR</h3>
-
-        <h3 class="text-animation indent-left-1">INTROSPECTION,</h3>
-        <h3 class="text-animation indent-left-2">WE CURATE</h3>
-        <h3 class="text-animation indent-left-3">EXPERIENCES</h3>
-        <h3 class="text-animation indent-left-4">DESIGNED TO</h3>
-        <h3 class="text-animation indent-left-5">EXPAND YOUR</h3>
-        <h3 class="text-animation indent-left-6">PERCEPTION AND</h3>
-
-        <h3 class="text-animation indent-right-7">CONSCIOUSNESS.</h3>
-        <h3 class="text-animation indent-right-8">WHETHER</h3>
-        <h3 class="text-animation indent-right-9">THROUGH THE</h3>
-        <h3 class="text-animation indent-right-10">STILLNESS OF A TEA</h3>
-        <h3 class="text-animation indent-right-11">RITUAL OR THE</h3>
-        <h3 class="text-animation indent-right-12">DYNAMIC</h3>
-
-        <h3 class="text-animation indent-left-7">EXPRESSION</h3>
-        <h3 class="text-animation indent-left-8">OF MOVEMENT,</h3>
-        <h3 class="text-animation indent-left-9">EVERY ELEMENT</h3>
-        <h3 class="text-animation indent-left-10">INVITES YOU TO</h3>
-        <h3 class="text-animation indent-left-11">ENGAGE CREATIVE</h3>
-        <h3 class="text-animation indent-left-12">VISION AND STEP INTO THE</h3>
-
-        <h3 class="text-animation indent-right-13">ALCHEMICAL</h3>
-        <h3 class="text-animation indent-right-14">PROCESS OF</h3>
-        <h3 class="text-animation indent-right-15">SELF-DISCOVERY.</h3> */}
-
-        {/* <h3 className="text-animation">
-        FROM MEDITATIVE JOURNEYS TO PHILOSOPHICAL DEEP-DIVES, AND IMMERSIVE SOUNDSCAPES THAT GUIDE YOUR INTROSPECTION, WE CURATE EXPERIENCES DESIGNED TO EXPAND YOUR PERCEPTION AND CONSCIOUSNESS. WHETHER THROUGH THE STILLNESS OF A TEA RITUAL OR THE DYNAMIC EXPRESSION OF MOVEMENT, EVERY ELEMENT INVITES YOU TO ENGAGE CREATIVE VISION AND STEP INTO THE ALCHEMICAL PROCESS OF SELF-DISCOVERY.
-        </h3> */}
       </div>
       <div ref={aboutRef} className="closing">
         <img src={logoWhite} />

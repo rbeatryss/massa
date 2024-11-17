@@ -11,8 +11,7 @@
     color: rgb(254, 254, 254);
     scroll-snap-align: center;
     overflow: hidden;
-    /* box-sizing: border-box;
-    flex-wrap: wrap; */
+    box-sizing: border-box;
 }
 
 .event-card::before {
