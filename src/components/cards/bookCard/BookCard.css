@@ -124,17 +124,14 @@
 
     .book-card-description {
         display: none;
-        /* Hide mobile description on desktop */
     }
 
     .book-card-description-desktop {
         display: block;
-        /* Show desktop description */
     }
 
     .book-card-button-container {
         display: none;
-        /* Hide mobile buttons on desktop */
     }
 
     .book-card-button-container-desktop {

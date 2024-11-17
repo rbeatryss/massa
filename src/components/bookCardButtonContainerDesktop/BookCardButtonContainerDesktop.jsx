@@ -3,7 +3,15 @@ import './BookCardButtonContainerDesktop.css';
 import CustomButton from '../buttons/CustomButton';
 
 const BookCardButtonContainerDesktop = ({ buttonData }) => {
-    const { eventName, eventDate, eventTime } = buttonData;
+    const { eventName, eventDate, eventTime, type } = buttonData;
+
+    // Check if the button type is 'coming soon' (for 'INVITE ONLY')
+    if (type === 'coming soon') {
+        return (
+            <h3 className='comming-soon-type'>INVITES ONLY</h3>
+        );
+    }
+
     return (
         <div className="desktop-button-wrapper">
             <div className="desktop-button-card-content">
