@@ -73,7 +73,7 @@ p {
     }
 
     .event-card-button-container {
-        margin: 2rem;
+        margin: 1rem -1rem;
     }
 
     .event-card-title-name,
